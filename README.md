@@ -1,8 +1,8 @@
-# Leo <img src="./src/assets/leo.png" width="100" height="150"/> ![CI](https://github.com/vortzify/Leo/actions/workflows/ci.yml/badge.svg) ![Version](https://img.shields.io/badge/Version-0.0.1-blue)
+# Leo <img src="./src/assets/leo.png" width="100" height="150"/>
 
 ![CI](https://github.com/vortzify/Leo/actions/workflows/ci.yml/badge.svg)
 ![Version](https://img.shields.io/badge/Version-0.0.1-blue)
-![Pnpm](https://img.shields.io/badge/Manager-Pnpm-informational?style=flat&logo=pnpm&color=F9AD00)
+[![Pnpm](https://img.shields.io/badge/Manager-Pnpm-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
 ![Vite](https://img.shields.io/badge/Build-Vite-informational?style=flat&logo=vite&color=646CFF)
 ![Typscript](https://img.shields.io/badge/Code-Typescript-informational?style=flat&logo=typescript&color=3178c6)
 ![React.js](https://img.shields.io/badge/Library-React.js-61DAFB?logo=react&logoColor=white)
