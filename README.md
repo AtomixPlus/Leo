@@ -1,7 +1,7 @@
 # Leo <img src="./src/assets/leo.png" width="100" height="150"/>
 
 
-![CI](https://img.shields.io/github/actions/workflow/status/ijeffro/leo/ci.yml?branch=main)
+![CI](https://img.shields.io/github/actions/workflow/status/vortzify/leo/ci.yml?branch=main)
 
 <!-- [![CI](https://github.com/vortzify/Leo/actions/workflows/ci.yml/badge.svg)](https://github.com/vortzify/Leo/actions/workflows/ci.yml) -->
 ![Version](https://img.shields.io/badge/Version-0.0.1-blue)
