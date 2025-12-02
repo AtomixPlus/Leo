@@ -53,7 +53,7 @@ Contributing to Leo is about more than just issues and pull requests! There are 
 <br/>
 
 
-# ⚠️ Security Vulnerabilities
+# ⚠️ Security
 If you discover a security vulnerability within Leo, please send an e-mail to Phil Graham via ijeffrouk@gmail.com. All security vulnerabilities will be promptly addressed.
 
 <br/>
