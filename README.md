@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/vortzify/Leo//actions/workflows/ci.yml/badge.svg)
 ![Version](https://img.shields.io/badge/Version-0.0.1-blue)
-![Bun](https://img.shields.io/badge/Manager-Bun-informational?style=flat&logo=bun&color=F9AD00)
+<!-- ![Bun](https://img.shields.io/badge/Manager-Bun-informational?style=flat&logo=bun&color=F9AD00) -->
 ![Pnpm](https://img.shields.io/badge/Manager-Pnpm-informational?style=flat&logo=pnpm&color=F9AD00)
 ![Vite](https://img.shields.io/badge/Build-Vite-informational?style=flat&logo=vite&color=646CFF)
 ![Typscript](https://img.shields.io/badge/Code-Typescript-informational?style=flat&logo=typescript&color=3178c6)
