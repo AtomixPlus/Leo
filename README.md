@@ -1,4 +1,4 @@
-# Leo <img src="./src/assets/leo.png" width="100" height="150"/>
+# Leo <img src="https://github.com/vortzify/Leo/blob/main/src/assets/leo.png" width="100" height="150"/>
 
 [![CI](https://github.com/vortzify/Leo/actions/workflows/ci.yml/badge.svg)](https://github.com/vortzify/Leo/actions/workflows/ci.yml?branch=main)
 ![Version](https://img.shields.io/badge/Version-0.0.1-blue)
