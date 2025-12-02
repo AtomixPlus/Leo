@@ -1,4 +1,3 @@
-
 # Leo <img src="./src/assets/leo.png" width="100" height="150"/>
 
 [![Build](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml/badge.svg)](https://github.com/vortzify/Leo/.github/workflows/ci.yml)
@@ -18,13 +17,13 @@ A high-performance React component library engineered with TypeScript, Vite, and
 - [Installation](#Installation)
 - Usage
 - Components
-- [Testing](#Test-Coverage)
+- [Testing](./.github/pages/TESTING.md)
 - Linting & Type Checking
 - Building
 - Storybook / Documentation
 - Continuous Integration (CI)
 - Contributing
-- License
+- [License](#License)
 
 
 # 💿 Installation
@@ -38,7 +37,7 @@ You can install this component library using pnpm, npm, or yarn.
 <details>
     <summary>pnpm</summary>
     ```
-    pnpm add your-library-name
+    pnpm add vortz/leo
     ```
 </details> 
 <details> 
