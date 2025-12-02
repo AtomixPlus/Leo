@@ -1,6 +1,9 @@
 # Leo <img src="./src/assets/leo.png" width="100" height="150"/>
 
-[![CI](https://github.com/vortzify/Leo/actions/workflows/ci.yml/badge.svg)](https://github.com/vortzify/Leo/actions/workflows/ci.yml)
+
+![CI](https://img.shields.io/github/actions/workflow/status/ijeffro/leo/ci.yml?branch=main)
+
+<!-- [![CI](https://github.com/vortzify/Leo/actions/workflows/ci.yml/badge.svg)](https://github.com/vortzify/Leo/actions/workflows/ci.yml) -->
 ![Version](https://img.shields.io/badge/Version-0.0.1-blue)
 [![Pnpm](https://img.shields.io/badge/Manager-Pnpm-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
 [![Vite](https://img.shields.io/badge/Build-Vite-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
