@@ -2,69 +2,39 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - develop
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20]
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix['node-version'] }}
-          cache: 'pnpm' # set to 'bun' if using Bun primarily
+          node-version: 20
+          cache: 'pnpm'
 
-      # ---- Choose PM: PNPM or BUN ----
-      # Comment/Uncomment depending on your project
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: latest
-
-      # - name: Setup Bun
-      #   uses: oven-sh/setup-bun@v1
-      #   with:
-      #     bun-version: latest
-
-      # ---------------------------------
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: |
-          if [ -f pnpm-lock.yaml ]; then
-            pnpm install
-          elif [ -f bun.lockb ]; then
-            bun install
-          else
-            npm install
-          fi
-
-      - name: Run build
-        run: |
-          if [ -f pnpm-lock.yaml ]; then
-            pnpm build
-          elif [ -f bun.lockb ]; then
-            bun run build
-          else
-            npm run build
-          fi
+        run: pnpm install
 
       - name: Run tests
-        run: |
-          if [ -f pnpm-lock.yaml ]; then
-            pnpm test
-          elif [ -f bun.lockb ]; then
-            bun test
-          else
-            npm test
-          fi
+        run: pnpm test
+
+      - name: Build library
+        run: pnpm build
+
+      - name: Lint code
+        run: pnpm lint
