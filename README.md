@@ -10,7 +10,7 @@
 ![Node.js](https://img.shields.io/badge/Build-Node.js-informational?style=flat&logo=nodedotjs&color=3c873a)
 
 
-A modern, high-performance React component library built with TypeScript and powered by Vite, designed for developers who value speed, flexibility, and clean architecture. Every component is fully typed, accessible, and tree-shakeable—making it effortless to build fast, scalable, and beautifully consistent user interfaces. Optimized for modern tooling like Bun and pnpm, this library delivers a smooth developer experience while providing a reliable, extensible foundation for any frontend project.
+A high-performance React component library engineered with TypeScript, Vite, and Node.js. Every component is fully typed, tree-shakeable, and optimized for modern build tools like Bun and pnpm. Perfect for developers who want a fast, flexible, and scalable UI foundation.
 
 # 📜 License
 
