@@ -37,7 +37,7 @@ Perfect for developers who want a scalable, fast, and flexible UI foundation for
 
 <br/><br/>
 
-## 💻 Installation
+# 💻 Installation
 You can install this library in your projects using 'pnpm', 'npm', or 'yarn'. Make sure your package registry is correctly configured if using a private registry, or install directly from a public registry or local path.
 
 ```bash
