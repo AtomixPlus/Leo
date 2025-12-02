@@ -1,4 +1,4 @@
-# Leo <img src="./src/assets/leo.png" width="100" height="150"/> 🤝 Contributing
+# Leo <img src="./src/assets/leo.png" width="100" height="150"/>
 
 ![CI](https://github.com/vortzify/Leo/actions/workflows/ci.yml/badge.svg)
 ![Version](https://img.shields.io/badge/Version-0.0.1-blue)
