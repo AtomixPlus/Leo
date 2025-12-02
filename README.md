@@ -1,5 +1,5 @@
 
-# Leo <img src="./assets/leo.png" width="100" height="150"/>
+# Leo <img src="./src/assets/leo.png" width="100" height="150"/>
 
 [![Build and Deploy](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml/badge.svg)](https://github.com/kratostaine/spring-authorization-server/actions/workflows/continuous-integration-workflow.yml)
 ![Version](https://img.shields.io/badge/Version-0.0.1-blue)
