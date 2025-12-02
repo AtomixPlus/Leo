@@ -43,8 +43,6 @@ You can install this library in your projects using 'pnpm', 'npm', or 'yarn'. Ma
 
 
 
-# 🤝 Contributing
-We welcome contributions to improve this component library! Whether you want to add new components, fix bugs, improve documentation, or enhance tests, your help is appreciated.
 
 ### 1️⃣ How to Contribute
 
@@ -95,9 +93,16 @@ pnpm storybook
 
 <br/><br/>
 
+# 🤝 Contributing
+We welcome contributions to improve this component library! Whether you want to add new components, fix bugs, improve documentation, or enhance tests, your help is appreciated.
 
-# Security Vulnerabilities
+<br/><br/>
+
+
+# ⚠️ Security Vulnerabilities
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+
+<br/><br/>
 
 
 # 📜 License
