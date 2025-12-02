@@ -13,12 +13,12 @@ export default defineConfig({
         },
         rollupOptions: {
             external: [
+                "clsx",
                 "react",
                 "react-dom",
-                "class-variance-authority",
-                "clsx",
                 "react-aria-components",
-                "@adobe/react-spectrum"
+                "@adobe/react-spectrum",
+                "class-variance-authority"
             ],
             output: {
                 globals: {
