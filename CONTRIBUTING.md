@@ -9,77 +9,109 @@
 ![Node.js](https://img.shields.io/badge/Build-Node.js-informational?style=flat&logo=nodedotjs&color=3c873a)
 
 
-A high-performance React component library engineered with TypeScript, Vite, and Node.js. Every component is fully typed, tree-shakeable, and optimized for modern build tools like Bun and pnpm. Perfect for developers who want a fast, flexible, and scalable UI foundation.
 
-# 📑 Table of Contents
+## 📖 Storybook
 
-- [Introduction](#Installation)
-- [Installation](#Installation)
-- Usage
-- Components
-- [Testing](#Test-Coverage)
-- Linting & Type Checking
-- Building
-- Storybook / Documentation
-- Continuous Integration (CI)
-- Contributing
-- [License](#License)
+Storybook allows you to preview and interact with components in isolation, making it easier to develop, test, and document your UI library.
 
+### 1️⃣ Running Storybook
+
+Start the Storybook server:
+```bash
+pnpm storybook
+```
+- Opens a local development server (usually at http://localhost:6006)
+- Hot-reloads changes in your components automatically
+
+### 2️⃣ Building Storybook
+
+Generate a static build for deployment:
+
+```bash
+pnpm build:storybook
+```
+- The static site is output to storybook-static/
+- Can be deployed to Netlify, Vercel, GitHub Pages, or any static hosting
+
+### 3️⃣ Writing Stories
+
+Story files live alongside your components, using the .stories.tsx extension.
+
+Example: `Button.stories.tsx`
+
+```typescript
+import { Meta, StoryObj } from '@storybook/react';
+import Button from './Button';
+
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
+  component: Button,
+};
+export default meta;
+
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
+  args: {
+    children: 'Click Me',
+    onClick: () => alert('Button clicked!'),
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: 'Disabled',
+    disabled: true,
+  },
+};
+```
+
+- Meta defines the component and its title in Storybook
+- Each export represents a different story/state of the component
+
+
+### 4️⃣ Tips
+
+- Use args to define props for stories — makes controls interactive
+- Organize stories in folders to match your component structure
+- Leverage addons like @storybook/addon-essentials for documentation, controls, and accessibility
+
+<br/><br/>
 
 # 🧪 Testing
 
-This library uses Vitest as the test runner, React Testing Library for component testing, and TypeScript for type safety. Follow the instructions below to create, run, and maintain tests.
+### 1️⃣ Running Tests
 
-
-## 1️⃣ Installing Testing Dependencies
-
-Ensure you have all required dev dependencies installed:
+Run all tests:
 ```bash
-pnpm add -D vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event @types/jest ts-node
+pnpm test
 ```
 
-- vitest – test runner
-- @testing-library/react – render and query components
-- @testing-library/jest-dom – custom matchers like toBeInTheDocument()
-- @testing-library/user-event – simulate user interactions
-- ts-node – run TypeScript tests
-
-
-
-## 2️⃣ Setting Up Vitest
-
-Create a vitest.config.ts in the project root:
-```typescript
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  test: {
-    globals: true,           // Use global test functions like `describe` and `it`
-    environment: 'happy-dom', // DOM environment for testing React components
-    setupFiles: './src/setupTests.ts', // Setup file for jest-dom matchers
-  },
-})
-
+Run tests in watch mode during development:
+```bash
+pnpm test:watch
 ```
 
-3️⃣ Setup File for Jest-DOM
-Create src/vitest.setup.ts:
-```typescript
-import '@testing-library/jest-dom'
+Generate coverage reports:
+```bash
+pnpm vitest run --coverage
 ```
-This ensures TypeScript recognizes custom matchers like:
+- Coverage reports are saved in the coverage/ folder.
+- You can integrate coverage with Codecov or Coveralls for CI pipelines.
 
-```typescript
-expect(element).toBeInTheDocument()
-expect(element).toHaveTextContent('Hello')
+### 2️⃣ Adding New Tests
+All new tests should live next to the component they test, using the .test.tsx or .spec.tsx extension.
+
+Example folder structure:
+```bash
+src/components/Button/Button.tsx
+src/components/Button/Button.test.tsx
 ```
-
+Example test:
 ```typescript
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import Button from './Button'
 
 describe('Button Component', () => {
@@ -88,7 +120,7 @@ describe('Button Component', () => {
     expect(screen.getByText('Click Me')).toBeInTheDocument()
   })
 
-  it('calls onClick handler when clicked', async () => {
+  it('calls onClick when clicked', async () => {
     const handleClick = vi.fn()
     render(<Button onClick={handleClick}>Click Me</Button>)
 
@@ -97,3 +129,28 @@ describe('Button Component', () => {
   })
 })
 ```
+
+### 3️⃣ Guidelines for Writing Tests
+
+1. Use descriptive names for describe and it blocks:
+
+```typescript
+describe('Checkbox', () => {
+  it('renders with correct label', () => { ... })
+})
+```
+
+2. Use React Testing Library queries for accessibility:
+    - `screen.getByText`, `screen.getByRole`, `screen.getByLabelText`, etc.
+
+3. Use user-event to simulate realistic user interactions instead of fireEvent.
+
+4. Mock external dependencies when necessary:
+    - Functions: vi.fn()
+    - Modules: vi.mock()
+
+5. Test behavior, not implementation:
+    - Focus on what the component does, not how it does it.
+
+<br/><br/>
+
