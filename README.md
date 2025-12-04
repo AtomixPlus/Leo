@@ -40,23 +40,27 @@
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px"><div style="background: transparent; padding: 10px">
 
-  A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows. Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
+  A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows.
+  <br>
+  
+  Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
   # 📑 Table of Contents
 
-- [Installation](#💻-Installation)
-- [Usage](#usage)
-- [Contributing](#🤝-Contributing)
-  - [Testing](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-testing)
-    - [Running Tests](#1️⃣-running-tests)
-    - [Adding New Tests](#2️⃣-adding-new-tests)
-    - [Guidelines for Writing Tests](#3️⃣-guidelines-for-writing-tests)
-  - [Storybook](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-storybook)
-    - [Running Storybook](#1️⃣-running-storybook)
-    - [Building Storybook](#2️⃣-building-storybook)
-    - [Writing Stories](#3️⃣-writing-stories)
-    - [Tips](#4️⃣-tips)
-- [License](#📜-License)
+  - [Installation](#💻-Installation)
+  - [Usage](#usage)
+  - [Contributing](#🤝-Contributing)
+    - [Testing](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-testing)
+      - [Running Tests](#1️⃣-running-tests)
+      - [Adding New Tests](#2️⃣-adding-new-tests)
+      - [Guidelines for Writing Tests](#3️⃣-guidelines-for-writing-tests)
+    - [Storybook](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-storybook)
+      - [Running Storybook](#1️⃣-running-storybook)
+      - [Building Storybook](#2️⃣-building-storybook)
+      - [Writing Stories](#3️⃣-writing-stories)
+      - [Tips](#4️⃣-tips)
+  - [License](#📜-License)
+
 
 </div>
 <div
@@ -69,12 +73,10 @@ style="
 "
 >
   <img
-    src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/elephant.png"
+    src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/pages/animated-elephant.svg"
     alt="Leo"
-    class="leo-image"
   />
 </div></div>
-
 
 
 
