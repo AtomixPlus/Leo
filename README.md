@@ -17,7 +17,7 @@
 
 <style>
   /* Hidden by default */
-  .sue-image {
+  .leo-image {
     width: auto;
     height: 100%;
     display: none;
@@ -27,8 +27,8 @@
 
 
   /* Display at desktop breakpoint */
-  @media (min-width: 1630px) {
-    .sue-image {
+  @media (min-width: 250px) {
+    .leo-image {
       display: block;
       opacity: 0;
       animation: fadeIn 0.6s ease-out forwards;
@@ -43,110 +43,50 @@
 </style>
 
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(550px, 1fr)); gap: 10px">
-<div style="background: transparent; padding: 10px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px"><div style="background: transparent; padding: 10px">
 
-  
-  <h2>📚 Storybook</h2>
-  <p>Sue uses <b>Storybook</b> to provide an isolated environment for developing, previewing, and documenting UI components. This section explains how to create stories for your components and how to run <b>Storybook</b> locally.</p>
+  A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows. Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
-  - **Run Storybook via on localhost:6060** 
+  # 📑 Table of Contents
 
-  ```bash
-  bun sb
-  ```
-
-  <br>
-  
-  <h2>🧪 Testing</h2>
-  <p>Sue uses <b>Vitest</b> and <b>@testing-library/react</b> for testing components. You can run different types of tests using the following commands:</p>
-
-  - **Run all tests** 
-  ```
-  bun run test
-  ```
-  This runs all unit and integration tests in the project.
-
-  - **Run interactive UI tests** 
-  ```
-  bun run test:ui
-  ```
-  Opens an interactive testing mode where you can watch tests live and debug easily.
-
-  - **Run tests with coverage** 
-  ```
-  bun run test:coverage
-  ```
-
-  <br>
-
-  <h2>📁 Inside a Component Folder</h2>
-
-  Using Button as an example:
-
-  ```
-  📁 src/
-    📁 assets/
-    📁 components/
-      📁 Button/
-        📄 Button.tsx            → the component
-        📄 Button.test.tsx       → Vitest + RTL test
-        📄 Button.stories.tsx    → Storybook stories
-        📄 index.ts              → re-export component
-  ```
-
-<h3>✔️ Why this structure?</h3>
-
-- Keeps everything about a component cohesive
-- No long file names like Button.styles.tsx, Button.spec.tsx in the same folder
-- Storybook, tests, and component live side-by-side
+- [Installation](#💻-Installation)
+- [Usage](#usage)
+- [Contributing](#🤝-Contributing)
+  - [Testing](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-testing)
+    - [Running Tests](#1️⃣-running-tests)
+    - [Adding New Tests](#2️⃣-adding-new-tests)
+    - [Guidelines for Writing Tests](#3️⃣-guidelines-for-writing-tests)
+  - [Storybook](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-storybook)
+    - [Running Storybook](#1️⃣-running-storybook)
+    - [Building Storybook](#2️⃣-building-storybook)
+    - [Writing Stories](#3️⃣-writing-stories)
+    - [Tips](#4️⃣-tips)
+- [License](#📜-License)
 
 </div>
- <div
-  class="image-wrapper"
-  style="
-    background: transparent;
-    padding: 20px;
-    display: grid;
-    align-items: end;
-  "
+<div
+class="image-wrapper"
+style="
+  background: transparent;
+  padding: 20px;
+  display: grid;
+  align-items: end;
+"
 >
   <img
     src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/elephant.png"
     alt="Leo"
-    class="sue-image"
+    class="leo-image"
   />
-</div>
-</div>
+</div></div>
 
 
 
-
-
-A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows. Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
 The library comes with a robust testing setup using `Vitest` and `React Testing Library`, ensuring components are reliable, maintainable, and production-ready. `Tailwind CSS` integration allows for rapid, consistent styling while keeping components flexible and customizable. 
 
 Perfect for developers who want a scalable, fast, and flexible UI foundation for modern React projects, with developer experience and productivity in mind.
 
-# 📑 Table of Contents
-
-- [Installation](#💻-Installation)
-- [Usage](#usage)
-- [Testing](#testing)
-  - [Running Tests](#1️⃣-running-tests)
-  - [Adding New Tests](#2️⃣-adding-new-tests)
-  - [Guidelines for Writing Tests](#3️⃣-guidelines-for-writing-tests)
-- [Storybook](#storybook)
-  - [Running Storybook](#1️⃣-running-storybook)
-  - [Building Storybook](#2️⃣-building-storybook)
-  - [Writing Stories](#3️⃣-writing-stories)
-  - [Tips](#4️⃣-tips)
-- [Badges](#badges)
-- [Contributing](#🤝-Contributing)
-- [License](#📜-License)
-
-<br/><br/>
 
 # 💻 Installation
 You can install this library in your projects using 'pnpm', 'npm', or 'yarn'. Make sure your package registry is correctly configured if using a private registry, or install directly from a public registry or local path.
