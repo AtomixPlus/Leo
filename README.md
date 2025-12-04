@@ -12,9 +12,6 @@
 [![Tailwind CSS](https://img.shields.io/badge/Style-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![React.js](https://img.shields.io/badge/Library-React.js-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 
-<!-- ![Bun](https://img.shields.io/badge/Manager-Bun-informational?style=flat&logo=bun&color=F9AD00) -->
-
-
 <style>
   /* Hidden by default */
   .leo-image {
