@@ -1,14 +1,30 @@
 {
     "compilerOptions": {
         "jsx": "react-jsx",
-        "esModuleInterop": true,
-        "module": "preserve",
+        "target": "ES2020",
+        "module": "ESNext",
         "moduleResolution": "bundler",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
         "baseUrl": ".",
         "paths": {
             "@/*": [
                 "src/*"
             ]
-        }
-    }
+        },
+        "strict": true
+    },
+    "include": [
+        "src",
+        ".storybook",
+        "eslint.config.ts",
+        "vite.config.ts",
+        "vitest.config.ts",
+        "vitest.setup.ts",
+        "global.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
