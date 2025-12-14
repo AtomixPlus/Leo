@@ -11,7 +11,7 @@ on:
       - develop
 
 jobs:
-  build-and-test:
+  verification:
     runs-on: ubuntu-latest
 
     steps:
