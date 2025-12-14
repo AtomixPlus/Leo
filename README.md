@@ -6,7 +6,7 @@
 ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-0%25-brightgreen)
 
 [![Vitest](https://img.shields.io/badge/Test-Vitest-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
-[![Playwright](https://img.shields.io/badge/Test-Playwright-informational?style=flat&logo=playwright&color=1E8D22&logoColor=D65348)](https://playwright.dev/)
+
 ![Version](https://img.shields.io/badge/Version-0.0.3-blue)
 [![Pnpm](https://img.shields.io/badge/Manager-Pnpm-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
 [![Vite](https://img.shields.io/badge/Build-Vite-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
