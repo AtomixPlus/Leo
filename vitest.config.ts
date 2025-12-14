@@ -11,6 +11,12 @@ const dirname =
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   test: {
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "json-summary", "lcov"],
+      reportsDirectory: "coverage",
+    },
+
     environment: "happy-dom",
     globals: true,
     setupFiles: "./.storybook/vitest.setup.ts",
@@ -38,10 +44,12 @@ export default defineConfig({
           },
           setupFiles: [".storybook/vitest.setup.ts"],
           exclude: ["src/stories/**"],
+
         },
       },
     ],
   },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
