@@ -1,8 +1,13 @@
 import "@testing-library/jest-dom";
 import { cleanup } from "@testing-library/react";
-import { afterEach } from "vitest";
+import { afterEach, beforeAll } from "vitest";
 
-// Cleanup after each test
+// after each test
 afterEach(() => {
   cleanup();
+});
+
+// before each test
+beforeAll(() => {
+
 });

@@ -51,6 +51,9 @@ importers:
       '@eslint/js':
         specifier: ^9.39.1
         version: 9.39.1
+      '@storybook-community/storybook-dark-mode':
+        specifier: ^7.0.3
+        version: 7.0.3(@storybook/addon-docs@10.1.4(@types/react@18.3.27)(esbuild@0.27.1)(rollup@4.53.3)(storybook@10.1.4(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(lightningcss@1.30.2)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@10.1.4(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       '@storybook/addon-a11y':
         specifier: ^10.1.4
         version: 10.1.4(storybook@10.1.4(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
@@ -1976,6 +1979,15 @@ packages:
 
   '@standard-schema/spec@1.0.0':
     resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
+
+  '@storybook-community/storybook-dark-mode@7.0.3':
+    resolution: {integrity: sha512-WurPide2eNG3kdmLbiZeMcEEDfq+0gJsiRWemcegwE8satnRH6cVM8fkU/1UxGr5LYUK7d0CjdqrcKHCBAJMUw==}
+    peerDependencies:
+      '@storybook/addon-docs': ^10.0.0
+      storybook: ^10.0.0
+    peerDependenciesMeta:
+      '@storybook/addon-docs':
+        optional: true
 
   '@storybook/addon-a11y@10.1.4':
     resolution: {integrity: sha512-go7SshAyu+pnK7Prq3UnCBCB7DxAQkPMnebsv3fnboeTZHnDXQqfmHdZ15o+pH0JsCedC05RYsdbjd2rMHMvFQ==}
@@ -7102,6 +7114,17 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
 
   '@standard-schema/spec@1.0.0': {}
+
+  '@storybook-community/storybook-dark-mode@7.0.3(@storybook/addon-docs@10.1.4(@types/react@18.3.27)(esbuild@0.27.1)(rollup@4.53.3)(storybook@10.1.4(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(lightningcss@1.30.2)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@10.1.4(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
+    dependencies:
+      '@storybook/icons': 2.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      dequal: 2.0.3
+      storybook: 10.1.4(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    optionalDependencies:
+      '@storybook/addon-docs': 10.1.4(@types/react@18.3.27)(esbuild@0.27.1)(rollup@4.53.3)(storybook@10.1.4(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(lightningcss@1.30.2))
+    transitivePeerDependencies:
+      - react
+      - react-dom
 
   '@storybook/addon-a11y@10.1.4(storybook@10.1.4(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))':
     dependencies:

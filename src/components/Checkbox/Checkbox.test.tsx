@@ -40,7 +40,8 @@ describe("Leo Checkbox", () => {
     render(<Checkbox label="Accept terms" onChange={handleChange} />);
     const checkbox = screen.getByRole("checkbox");
 
-    await user.click(checkbox);
+    await user.click(checkbox); // userEvent automatically wraps in act
+
     expect(handleChange).toHaveBeenCalledWith(true);
   });
 

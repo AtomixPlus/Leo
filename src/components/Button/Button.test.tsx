@@ -1,39 +1,50 @@
 import { describe, it, expect, vi } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Button } from "@/components/Button";
+import { PressEvent } from "react-aria-components";
 
-describe("Leo Button", () => {
-  it("renders default button", () => {
-    render(<Button>Button</Button>);
+
+
+describe("Leo Button", async () => {
+  it("renders default button", async () => {
+
+    act(() => render(<Button onClick={() => act(() => { })}>Button</Button>))
+
     expect(screen.getByRole("button")).toBeInTheDocument();
     expect(screen.getByText("Button")).toBeInTheDocument();
   });
 
   it("renders secondary variant", () => {
-    render(<Button variant="secondary">Secondary</Button>);
+    act(() => render(<Button variant="secondary" onClick={() => act(() => { })}>Secondary</Button>))
     const button = screen.getByRole("button");
     expect(button).toHaveTextContent("Secondary");
   });
 
   it("renders destructive variant", () => {
-    render(<Button variant="destructive">Destructive</Button>);
+    act(() => render(<Button variant="destructive" onClick={() => act(() => { })}>Destructive</Button>))
     const button = screen.getByRole("button");
     expect(button).toHaveTextContent("Destructive");
   });
 
   it("handles disabled state", () => {
-    render(<Button isDisabled>Disabled</Button>);
+    act(() => render(<Button isDisabled onClick={() => act(() => { })}>Disabled</Button>))
     const button = screen.getByRole("button");
     expect(button).toBeDisabled();
   });
 
   it("calls onPress handler", async () => {
-    const handlePress = vi.fn();
-    const user = userEvent.setup();
-    render(<Button onPress={handlePress}>Click me</Button>);
+    const handlePress = act(() => vi.fn());
+    const user = await act(() => userEvent.setup());
+
+    await act(async () => render(<Button onPress={(e: PressEvent) => handlePress}>Click Me</Button>))
+
     const button = screen.getByRole("button");
-    await user.click(button);
+
+    act(async () => await user.click(button));
+
     expect(handlePress).toHaveBeenCalledTimes(1);
   });
+
+
 });
