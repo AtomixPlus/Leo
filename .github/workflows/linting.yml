@@ -1,4 +1,4 @@
-name: Linting
+name: Styling Guide
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   linting:
-    name: Styling Guide
+    name: Linting
     runs-on: ubuntu-latest
 
     steps:
