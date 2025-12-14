@@ -8,7 +8,13 @@ import storybookPlugin from "eslint-plugin-storybook";
 
 export default [
   {
-    files: ["**/*.ts", "**/*.tsx"],
+    files: [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.test.ts",
+      "**/*.test.tsx",
+      "**/*.spec.tsx",
+    ],
     ignores: ["node_modules"],
     languageOptions: {
       parser: tsParser,
@@ -42,6 +48,11 @@ export default [
       storybook: storybookPlugin,
     },
     rules: {
+      "import/no-named-as-default": "off",
+      "import/no-named-as-default-member": "off",
+      "storybook/use-storybook-expect": "off",
+      "import/default": "off",
+
       "prettier/prettier": "error",
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
