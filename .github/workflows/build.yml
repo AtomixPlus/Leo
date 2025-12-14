@@ -1,4 +1,4 @@
-name: Component Build
+name: Build Components
 
 on:
   push:
