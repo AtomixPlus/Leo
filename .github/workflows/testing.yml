@@ -70,5 +70,5 @@ jobs:
       - name: Commit and push badge update
         run: |
           git add README.md
-          git diff --cached --quiet || git commit -m "chore: update coverage badge [skip ci]"
-          git diff --cached --quiet || git push origin HEAD
+          git commit -m "chore: update coverage badge [skip ci]"
+          git push origin HEAD
