@@ -3,7 +3,7 @@
 [![Build](https://github.com/AtomixPlus/Leo/actions/workflows/build.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/build.yml?branch=main)
 [![Linting](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml?branch=main)
 [![Coverage](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main)
-![Code_Coverage](https://img.shields.io/badge/Code_Coverage-0%25-brightgreen)
+![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen)
 
 [![Vitest](https://img.shields.io/badge/Test-Vitest-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
 ![Version](https://img.shields.io/badge/Version-0.0.3-blue)
