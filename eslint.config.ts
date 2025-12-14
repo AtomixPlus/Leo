@@ -15,7 +15,7 @@ export default [
       "**/*.test.tsx",
       "**/*.spec.tsx",
     ],
-    ignores: ["node_modules"],
+    ignores: ["node_modules", "coverage", "dist"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {

@@ -8,7 +8,7 @@ on:
 
 jobs:
   test-and-coverage:
-    name: Test & Generate Coverage
+    name: Generate Coverage
     runs-on: ubuntu-latest
 
     steps:
@@ -49,12 +49,13 @@ jobs:
           COVERAGE=$(node -p "require('./coverage/coverage-summary.json').total.lines.pct")
           BADGE_URL="https://img.shields.io/badge/coverage-${COVERAGE}%25-brightgreen"
           # Replace existing badge markdown (assumes first coverage badge in README)
-          sed -i -E "s#(!\[coverage\]\(https://img.shields.io/badge/Code_Coverage-)[0-9]+%25-brightgreen#\1${COVERAGE}%25-brightgreen#g" README.md
+          sed -i -E "s#(!\[Coverage\]\(https://img.shields.io/badge/Code_Coverage-)[0-9]+%25-brightgreen#\1${COVERAGE}%25-brightgreen#g" README.md
           echo "Updated Coverage Badge to ${COVERAGE}%"
       - name: Commit updated README
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "Phil"
+          git config user.email "ijeffrouk@gmail.com"
           git add README.md
           git commit -m "Update coverage badge [skip ci]" || echo "No changes to commit"
-          git push origin HEAD
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+
