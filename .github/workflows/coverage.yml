@@ -10,18 +10,23 @@ jobs:
   test-and-coverage:
     name: Test & Generate Coverage
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Setup Node.js first
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "pnpm"
 
-      - name: Install PNPM
-        run: corepack enable && corepack prepare pnpm@latest --activate
+      # Enable Corepack and prepare pnpm
+      - name: Enable Corepack and pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm -v
 
       - name: Install dependencies
         run: pnpm install
