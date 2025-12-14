@@ -1,73 +1,54 @@
-name: Code Coverage
+name: Update Coverage Badge
 
 on:
   push:
     branches:
       - main
       - dev
+  pull_request:
+    branches:
+      - main
+      - dev
 
 jobs:
   coverage:
-    name: Generate Coverage and Update Badge
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository with full history so we can push
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          persist-credentials: true  # GITHUB_TOKEN will be configured automatically
+          persist-credentials: true
 
-      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      # 3️⃣ Enable Corepack & pnpm
       - name: Enable Corepack and pnpm
         run: |
           corepack enable
           corepack prepare pnpm@latest --activate
-          pnpm -v
 
-      # 4️⃣ Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      # 5️⃣ Install Playwright browsers
-      - name: Install Playwright
-        run: pnpm exec playwright install --with-deps
-
-      # 6️⃣ Run tests with coverage
       - name: Run tests with coverage
         run: pnpm test --coverage
 
-      # 7️⃣ Upload coverage report as artifact (optional)
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage
-
-      # 8️⃣ Setup Git author info
-      - name: Setup Git
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-      # 9️⃣ Update coverage badge in README.md
       - name: Update Coverage Badge
         run: |
           COVERAGE=$(node -p "require('./coverage/coverage-summary.json').total.lines.pct")
           echo "Coverage: $COVERAGE%"
-          # Update first badge in README.md matching pattern
-          sed -i -E "s#(!\[Coverage\]\(https://img.shields.io/badge/Code_Coverage-)[0-9]+%25-brightgreen#\1${COVERAGE}%25-brightgreen#g" README.md
+          sed -i -E "s#(!\[Code_Coverage\]\(https://img.shields.io/badge/Code_Coverage-)[0-9]+%25-brightgreen#\1${COVERAGE}%25-brightgreen#g" README.md
 
-      # 🔟 Commit & push the updated badge only if there are changes
-      - name: Commit and push badge update
+      - name: Commit and push coverage badge update
         run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add README.md
-          git diff --quiet || git commit -m "Update coverage badge [skip ci]"
-          git diff --quiet || git push
+          git diff --cached --quiet || git commit -m "chore: update coverage badge [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
