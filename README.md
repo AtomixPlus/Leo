@@ -1,7 +1,10 @@
 # Leo <img src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/leo.png" width="100" height="150"/>
 
 ![Coverage](https://img.shields.io/badge/Code_Coverage-0%25-brightgreen)
-[![CI](https://github.com/AtomixPlus/Leo/actions/workflows/ci.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/ci.yml?branch=main)
+[![CI](https://github.com/AtomixPlus/Leo/actions/workflows/build.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/build.yml?branch=main)
+[![Coverage](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main)
+[![Linting](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml?branch=main)
+
 [![Vitest](https://img.shields.io/badge/Test-Vitest-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
 ![Version](https://img.shields.io/badge/Version-0.0.3-blue)
 [![Pnpm](https://img.shields.io/badge/Manager-Pnpm-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
