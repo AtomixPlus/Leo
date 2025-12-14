@@ -1,5 +1,6 @@
 # Leo <img src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/leo.png" width="100" height="150"/>
 
+![Coverage](https://img.shields.io/badge/Code_Coverage-0%25-brightgreen)
 [![CI](https://github.com/AtomixPlus/Leo/actions/workflows/ci.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/ci.yml?branch=main)
 [![Vitest](https://img.shields.io/badge/Test-Vitest-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
 ![Version](https://img.shields.io/badge/Version-0.0.3-blue)
@@ -11,7 +12,6 @@
 [![Storybook](https://img.shields.io/badge/Library-Storybook-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Style-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![React.js](https://img.shields.io/badge/Library-React.js-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px"><div style="background: transparent; padding: 10px">
 
