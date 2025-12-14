@@ -12,6 +12,7 @@ on:
 
 jobs:
   coverage:
+    name: Coverage
     runs-on: ubuntu-latest
 
     steps:
@@ -65,4 +66,4 @@ jobs:
       - name: Push changes
         if: github.ref == 'refs/heads/main'
         run: |
-          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
+          git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
