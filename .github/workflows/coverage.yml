@@ -5,76 +5,69 @@ on:
     branches:
       - main
       - dev
-  pull_request:
-    branches:
-      - main
-      - dev
 
 jobs:
   coverage:
-    name: Coverage
+    name: Generate Coverage and Update Badge
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code
+      # 1️⃣ Checkout repository with full history so we can push
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0       # required to push changes
-          persist-credentials: true  # allows using the GITHUB_TOKEN for git push
+          fetch-depth: 0
+          persist-credentials: true  # GITHUB_TOKEN will be configured automatically
 
-      # Setup Node.js
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      # Enable Corepack and pnpm
+      # 3️⃣ Enable Corepack & pnpm
       - name: Enable Corepack and pnpm
         run: |
           corepack enable
           corepack prepare pnpm@latest --activate
           pnpm -v
 
-      # Install dependencies
+      # 4️⃣ Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      # Install Playwright
+      # 5️⃣ Install Playwright browsers
       - name: Install Playwright
         run: pnpm exec playwright install --with-deps
 
-      # Run tests with coverage
+      # 6️⃣ Run tests with coverage
       - name: Run tests with coverage
         run: pnpm test --coverage
 
-      # Upload coverage report artifact
+      # 7️⃣ Upload coverage report as artifact (optional)
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: coverage
 
-      # Configure Git user
+      # 8️⃣ Setup Git author info
       - name: Setup Git
         run: |
-          git config user.name "ijeffro"
-          git config user.email "ijeffrouk@gmail.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
 
-      # Update coverage badge in README
+      # 9️⃣ Update coverage badge in README.md
       - name: Update Coverage Badge
         run: |
           COVERAGE=$(node -p "require('./coverage/coverage-summary.json').total.lines.pct")
+          echo "Coverage: $COVERAGE%"
+          # Update first badge in README.md matching pattern
           sed -i -E "s#(!\[Coverage\]\(https://img.shields.io/badge/Code_Coverage-)[0-9]+%25-brightgreen#\1${COVERAGE}%25-brightgreen#g" README.md
-          echo "Updated Coverage Badge to ${COVERAGE}%"
 
-      # Commit README changes if any
-      - name: Commit coverage badge update
+      # 🔟 Commit & push the updated badge only if there are changes
+      - name: Commit and push badge update
         run: |
           git add README.md
           git diff --quiet || git commit -m "Update coverage badge [skip ci]"
-
-      # Push changes to main
-      - name: Push changes
-        if: github.ref == 'refs/heads/main'
-        run: git push origin HEAD:main
+          git diff --quiet || git push
