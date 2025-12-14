@@ -1,4 +1,4 @@
-name: Coverage
+name: Code Coverage
 
 on:
   push:
@@ -63,6 +63,6 @@ jobs:
           git diff --quiet || git commit -m "Update coverage badge [skip ci]"
 
       - name: Push changes
-        if: github.ref == 'refs/heads/dev'  # optional: only push from dev, not PRs
+        if: github.ref == 'refs/heads/main'
         run: |
-          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:dev
+          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
