@@ -1,4 +1,4 @@
-name: Lint and Auto-Fix
+name: Styling Guide
 
 on:
   push:
