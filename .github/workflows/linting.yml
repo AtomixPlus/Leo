@@ -2,13 +2,17 @@ name: Linting
 
 on:
   push:
-    branches: ["main", "master"]
+    branches:
+      - main
+      - dev
   pull_request:
-    branches: ["main", "master"]
+    branches:
+      - main
+      - dev
 
 jobs:
   linting:
-    name: Generate Coverage
+    name: Linting
     runs-on: ubuntu-latest
 
     steps:
