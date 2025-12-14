@@ -1,4 +1,4 @@
-name: Styling Guide
+name: Linting
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   lint:
-    name: Lint and Auto-Fix
+    name: Applying styling guide
     runs-on: ubuntu-latest
 
     steps:
