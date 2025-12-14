@@ -62,7 +62,7 @@ jobs:
         run: |
           COVERAGE=$(node -p "require('./coverage/coverage-summary.json').total.lines.pct")
           echo "Coverage: $COVERAGE%"
-          perl -pi -e "s#(!\[Code_Coverage\]\(https://img.shields.io/badge/Code_Coverage-)[0-9]+%25-brightgreen#\1${COVERAGE}%25-brightgreen#g" README.md
+          sed -i -E "s#(!\[Code_Coverage\]\(https://img.shields.io/badge/Code_Coverage-)[0-9]+%25-brightgreen#\1${COVERAGE}%25-brightgreen#g" README.md
           echo "Updated README.md with new coverage"
 
       # 🔟 Commit & push the updated badge only if there are changes
