@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Checkbox } from "./index";
-import { within } from "storybook/test";
-import { expect } from "vitest";
+import { within, expect } from "storybook/test";
 
 const meta = {
   title: "Leo/Checkbox",
@@ -43,7 +42,7 @@ export const WithDescription: Story = {
     const checkbox = await assertCheckboxExists(canvasElement);
 
     await expect(
-      canvas.getByText("Receive emails about new products and features.")
+      canvas.getByText("Receive emails about new products and features."),
     ).toBeInTheDocument();
 
     await expect(checkbox).not.toBeChecked();

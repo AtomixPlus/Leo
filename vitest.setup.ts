@@ -8,6 +8,4 @@ afterEach(() => {
 });
 
 // before each test
-beforeAll(() => {
-
-});
+beforeAll(() => {});

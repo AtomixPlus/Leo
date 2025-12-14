@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "./index";
-import { within } from "storybook/test";
-import { expect } from "vitest";
-import userEvent from "@testing-library/user-event";
+import { within, expect } from "storybook/test";
+import { userEvent } from "@storybook/testing-library";
 
 const meta = {
   title: "Leo/Button",
@@ -37,7 +36,7 @@ type Story = StoryObj<typeof meta>;
 const assertButtonExists = async (canvasElement: HTMLElement) => {
   const canvas = within(canvasElement);
   const button = canvas.getByRole("button");
-  expect(button).toBeInTheDocument();
+  await expect(button).toBeInTheDocument();
   return button;
 };
 
@@ -47,7 +46,7 @@ export const Default: Story = {
   },
   play: async ({ canvasElement }) => {
     const button = await assertButtonExists(canvasElement);
-    expect(button).toHaveTextContent("Button");
+    await expect(button).toHaveTextContent("Button");
   },
 };
 
@@ -74,7 +73,7 @@ export const Destructive: Story = {
   },
   play: async ({ canvasElement }) => {
     const button = await assertButtonExists(canvasElement);
-    expect(button).toHaveTextContent("Destructive");
+    await expect(button).toHaveTextContent("Destructive");
   },
 };
 
@@ -85,7 +84,7 @@ export const Outline: Story = {
   },
   play: async ({ canvasElement }) => {
     const button = await assertButtonExists(canvasElement);
-    expect(button).toHaveTextContent("Outline");
+    await expect(button).toHaveTextContent("Outline");
   },
 };
 
@@ -96,7 +95,7 @@ export const Ghost: Story = {
   },
   play: async ({ canvasElement }) => {
     const button = await assertButtonExists(canvasElement);
-    expect(button).toHaveTextContent("Ghost");
+    await expect(button).toHaveTextContent("Ghost");
   },
 };
 
@@ -107,7 +106,7 @@ export const Link: Story = {
   },
   play: async ({ canvasElement }) => {
     const button = await assertButtonExists(canvasElement);
-    expect(button).toHaveTextContent("Link");
+    await expect(button).toHaveTextContent("Link");
   },
 };
 
@@ -118,7 +117,7 @@ export const Small: Story = {
   },
   play: async ({ canvasElement }) => {
     const button = await assertButtonExists(canvasElement);
-    expect(button).toHaveTextContent("Small");
+    await expect(button).toHaveTextContent("Small");
   },
 };
 
@@ -129,7 +128,7 @@ export const Large: Story = {
   },
   play: async ({ canvasElement }) => {
     const button = await assertButtonExists(canvasElement);
-    expect(button).toHaveTextContent("Large");
+    await expect(button).toHaveTextContent("Large");
   },
 };
 
@@ -140,6 +139,6 @@ export const Disabled: Story = {
   },
   play: async ({ canvasElement }) => {
     const button = await assertButtonExists(canvasElement);
-    expect(button).toBeDisabled();
+    await expect(button).toBeDisabled();
   },
 };
