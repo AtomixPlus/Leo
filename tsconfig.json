@@ -4,6 +4,7 @@
         "target": "ES2020",
         "module": "ESNext",
         "moduleResolution": "bundler",
+        "importsNotUsedAsValues": "remove",
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
