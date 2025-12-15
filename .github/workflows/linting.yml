@@ -45,7 +45,7 @@ jobs:
 
       # 5️⃣ Run ESLint with auto-fix
       - name: Run ESLint (auto-fix)
-        run: pnpm lint --fix
+        run: pnpm exec lint --fix
 
       # 6️⃣ Setup Git author info
       - name: Setup Git
