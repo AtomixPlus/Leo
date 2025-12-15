@@ -8,15 +8,16 @@ import storybookPlugin from "eslint-plugin-storybook";
 import importPlugin from "eslint-plugin-unused-imports";
 
 export default [
+  // 1️⃣ Type-checked files
   {
     files: [
-      "**/*.ts",
-      "**/*.tsx",
+      "src/**/*.ts",
+      "src/**/*.tsx",
       "**/*.test.ts",
       "**/*.test.tsx",
       "**/*.spec.tsx",
     ],
-    ignores: ["node_modules", "coverage", "dist", "**/*.d.ts", ".storybook/**/*.ts"],
+    ignores: ["node_modules", "dist", "coverage", "**/*.d.ts"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -25,16 +26,6 @@ export default [
         ecmaVersion: "latest",
         sourceType: "module",
         ecmaFeatures: { jsx: true },
-        include: [
-          "src",
-          ".storybook",
-          "eslint.config.ts",
-          "vite.config.ts",
-          "vitest.config.ts",
-          "vitest.setup.ts",
-          "vitest.shims.d.ts",
-          "global.d.ts",
-        ],
       },
       globals: { React: "readonly" },
     },
@@ -68,15 +59,46 @@ export default [
         },
       ],
 
-      "@typescript-eslint/no-unused-vars": [
-        "warn",
-        { argsIgnorePattern: "^_" },
-      ],
+      "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
       "@typescript-eslint/consistent-type-imports": [
         "error",
         { fixStyle: "inline-type-imports" },
       ],
     },
   },
+
+  // 2️⃣ Storybook files (no type-checking)
+  {
+    files: [".storybook/**/*.ts", ".storybook/**/*.tsx"],
+    ignores: ["**/*.d.ts"],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: { jsx: true },
+      },
+    },
+    plugins: {
+      "unused-imports": importPlugin,
+      "@typescript-eslint": tsPlugin,
+      prettier: prettierPlugin,
+    },
+    rules: {
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
+      ],
+      "prettier/prettier": "error",
+    },
+  },
+
+  // 3️⃣ Storybook recommended
   ...storybookPlugin.configs["flat/recommended"],
 ];
