@@ -50,4 +50,4 @@ jobs:
 
       # Lint code
       - name: Lint code
-        run: pnpm lint
+        run: pnpm eslint .
