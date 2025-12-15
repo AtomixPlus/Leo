@@ -16,7 +16,7 @@ export default [
       "**/*.test.tsx",
       "**/*.spec.tsx",
     ],
-    ignores: ["node_modules", "coverage", "dist"],
+    ignores: ["node_modules", "coverage", "dist", "**/*.d.ts", ".storybook/**/*.ts"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -35,18 +35,17 @@ export default [
           "vitest.shims.d.ts",
           "global.d.ts",
         ],
-
       },
       globals: { React: "readonly" },
     },
     plugins: {
       "unused-imports": importPlugin,
       "@typescript-eslint": tsPlugin,
-      "react": reactPlugin,
+      react: reactPlugin,
       "react-hooks": reactHooksPlugin,
       "jsx-a11y": jsxA11yPlugin,
-      "prettier": prettierPlugin,
-      "storybook": storybookPlugin,
+      prettier: prettierPlugin,
+      storybook: storybookPlugin,
     },
     rules: {
       "import/no-named-as-default": "off",
