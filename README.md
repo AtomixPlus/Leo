@@ -6,6 +6,15 @@
 [![Coverage](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main)
 ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen)
 
+A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows. 
+
+The library comes with a robust testing setup using Vitest and React Testing Library, ensuring components are reliable, maintainable, and production-ready. Tailwind CSS integration allows for rapid, consistent styling while keeping components flexible and customizable.
+
+Perfect for developers who want a scalable, fast, and flexible UI foundation for modern React projects, with developer experience and productivity in mind. Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, and other contemporary bundlers.
+
+<br>
+
+# 📑 Table of Contents
 [![Vitest](https://img.shields.io/badge/Test-Vitest-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
 [![Pnpm](https://img.shields.io/badge/Manager-Pnpm-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
 [![Vite](https://img.shields.io/badge/Build-Vite-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
@@ -15,13 +24,6 @@
 [![Storybook](https://img.shields.io/badge/Library-Storybook-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Style-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![React.js](https://img.shields.io/badge/Library-React.js-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-
-A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows.
-<br>
-  
-Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
-
-# 📑 Table of Contents
 
 - [Installation](#💻-Installation)
 - [Usage](#usage)
