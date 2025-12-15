@@ -23,7 +23,10 @@ export default [
         sourceType: "module",
         ecmaFeatures: { jsx: true },
         project: {
-          extends: "./tsconfig.json",
+          tsconfigRootDir: __dirname,
+          ecmaVersion: "latest",
+          sourceType: "module",
+          ecmaFeatures: { jsx: true },
           include: [
             "src",
             ".storybook",
@@ -40,6 +43,7 @@ export default [
       globals: { React: "readonly" },
     },
     plugins: {
+      "unused-imports": require("eslint-plugin-unused-imports"),
       "@typescript-eslint": tsPlugin,
       react: reactPlugin,
       "react-hooks": reactHooksPlugin,
@@ -56,11 +60,26 @@ export default [
       "prettier/prettier": "error",
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
+
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
+      ],
+
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_" },
       ],
-      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { fixStyle: "inline-type-imports" },
+      ],
     },
   },
   ...storybookPlugin.configs["flat/recommended"],
