@@ -5,6 +5,7 @@ import reactHooksPlugin from "eslint-plugin-react-hooks";
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import prettierPlugin from "eslint-plugin-prettier";
 import storybookPlugin from "eslint-plugin-storybook";
+import importPlugin from "eslint-plugin-unused-imports";
 
 export default [
   {
@@ -43,13 +44,13 @@ export default [
       globals: { React: "readonly" },
     },
     plugins: {
-      "unused-imports": require("eslint-plugin-unused-imports"),
+      "unused-imports": importPlugin,
       "@typescript-eslint": tsPlugin,
-      react: reactPlugin,
+      "react": reactPlugin,
       "react-hooks": reactHooksPlugin,
       "jsx-a11y": jsxA11yPlugin,
-      prettier: prettierPlugin,
-      storybook: storybookPlugin,
+      "prettier": prettierPlugin,
+      "storybook": storybookPlugin,
     },
     rules: {
       "import/no-named-as-default": "off",
