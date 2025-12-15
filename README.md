@@ -16,46 +16,26 @@
 [![Tailwind CSS](https://img.shields.io/badge/Style-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![React.js](https://img.shields.io/badge/Library-React.js-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px"><div style="background: transparent; padding: 10px">
-
-  A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows.
-  <br>
+A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows.
+<br>
   
-  Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
+Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
-  # 📑 Table of Contents
+# 📑 Table of Contents
 
-  - [Installation](#💻-Installation)
-  - [Usage](#usage)
-  - [Contributing](#🤝-Contributing)
-    - [Testing](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-testing)
-      - [Running Tests](#1️⃣-running-tests)
-      - [Adding New Tests](#2️⃣-adding-new-tests)
-      - [Guidelines for Writing Tests](#3️⃣-guidelines-for-writing-tests)
-    - [Storybook](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-storybook)
-      - [Running Storybook](#1️⃣-running-storybook)
-      - [Building Storybook](#2️⃣-building-storybook)
-      - [Writing Stories](#3️⃣-writing-stories)
-      - [Tips](#4️⃣-tips)
-  - [License](#📜-License)
-
-
-</div>
-<div
-class="image-wrapper"
-style="
-  background: transparent;
-  padding: 20px;
-  display: grid;
-  align-items: end;
-"
->
-  <img
-    src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/pages/animated-elephant.svg"
-    alt="Elephant"
-  />
-</div></div>
-
+- [Installation](#💻-Installation)
+- [Usage](#usage)
+- [Contributing](#🤝-Contributing)
+  - [Testing](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-testing)
+    - [Running Tests](#1️⃣-running-tests)
+    - [Adding New Tests](#2️⃣-adding-new-tests)
+    - [Guidelines for Writing Tests](#3️⃣-guidelines-for-writing-tests)
+  - [Storybook](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-storybook)
+    - [Running Storybook](#1️⃣-running-storybook)
+    - [Building Storybook](#2️⃣-building-storybook)
+    - [Writing Stories](#3️⃣-writing-stories)
+    - [Tips](#4️⃣-tips)
+- [License](#📜-License)
 
 
 The library comes with a robust testing setup using `Vitest` and `React Testing Library`, ensuring components are reliable, maintainable, and production-ready. `Tailwind CSS` integration allows for rapid, consistent styling while keeping components flexible and customizable. 
