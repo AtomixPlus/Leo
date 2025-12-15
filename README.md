@@ -8,11 +8,7 @@
 
 A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows. 
 
-The library comes with a robust testing setup using Vitest and React Testing Library, ensuring components are reliable, maintainable, and production-ready. Tailwind CSS integration allows for rapid, consistent styling while keeping components flexible and customizable.
-
-Perfect for developers who want a scalable, fast, and flexible UI foundation for modern React projects, with developer experience and productivity in mind. Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, and other contemporary bundlers.
-
-<br>
+Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
 # 📑 Table of Contents
 [![Vitest](https://img.shields.io/badge/Test-Vitest-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
