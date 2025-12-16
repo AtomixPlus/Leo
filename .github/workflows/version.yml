@@ -45,13 +45,13 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-      # 6️⃣ Update coverage badge in README.md
-      - name: Update Leo Version
+      # 6️⃣ Update version badge in README.md
+      - name: Update Version Badge
         run: |
           LEO_VERSION=$(node -p "require('./package.json').version")
-          echo "Version: $LEO_VERSION"
+          echo "Updating README.md with version: $LEO_VERSION"
           sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+\.[0-9]+\.[0-9]+(-blue\))#\1${LEO_VERSION}\2#g" README.md
-          echo "Updated README.md with new version"
+          echo "Updated README.md:"
           grep "Version" README.md
 
       # 7️⃣ Commit & push the updated badge only if there are changes
