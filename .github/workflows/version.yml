@@ -108,7 +108,7 @@ jobs:
           TAILWIND_VERSION=$(node -p "let v=require('./package.json').devDependencies.tailwindcss.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with Tailwind CSS version: $TAILWIND_VERSION"
           # Use a more robust regex and overwrite in-place
-          sed -i "s|\(\[!\[Tailwind CSS\](https://img.shields.io/badge/Tailwind%20CSS-\)[^?]*\(-38B2AC?style=flat&logo=tailwind-css&logoColor=white\]\)|\1${TAILWIND_VERSION}\2|" README.md
+          sed -i -E "s#(\[!\[Tailwind CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^?-]+#\1${TAILWIND_VERSION}#g" README.md
           echo "Updated README.md:"
           grep "Tailwind" README.md || true
 
