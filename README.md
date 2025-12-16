@@ -11,12 +11,12 @@ A high-performance, developer-friendly React component library built with `TypeS
 Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
 # 📑 Table of Contents
-[![Vitest](https://img.shields.io/badge/Vitest-v4.0.14-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
-[![Pnpm](https://img.shields.io/badge/Pnpm-v4.0.14-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
-[![Vite](https://img.shields.io/badge/Vite-v4.0.14-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-v4.0.14-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
+[![Vitest](https://img.shields.io/badge/Vitest-^4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
+[![Pnpm](https://img.shields.io/badge/Pnpm-10.25.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+[![Vite](https://img.shields.io/badge/Vite-^7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 
-[![TypeScript](https://img.shields.io/badge/Typescript-v4.0.14-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/Typescript-^5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
 [![Storybook](https://img.shields.io/badge/Storybook-10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.0.14-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![React.js](https://img.shields.io/badge/React.js-v4.0.14-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
