@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   coverage:
-    name: Update Versions 
+    name: Update Badges 
     runs-on: ubuntu-latest
 
     steps:
@@ -22,11 +22,11 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      # 2️⃣ Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
+      # # 2️⃣ Setup Node.js
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 20
 
       # # 3️⃣ Enable Corepack & pnpm
       # - name: Enable Corepack and pnpm
@@ -45,7 +45,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-      # 6️⃣ Update version badge in README.md
+      # 3️⃣ Update version badge in README.md
       - name: Update Leo Badge with Version
         run: |
           LEO_VERSION=$(node -p "require('./package.json').version")
@@ -54,7 +54,7 @@ jobs:
           echo "Updated README.md:"
           grep "Version" README.md
 
-      # 6️⃣ Update version badge in README.md
+      # 4️⃣ Update version badge in README.md
       - name: Update Storybook Badge with Version
         run: |
           STORYBOOK_VERSION=$(node -p "require('./package.json').devDependencies.storybook")
@@ -63,6 +63,72 @@ jobs:
           echo "Updated README.md:"
           grep "Version" README.md
 
+      # 6️⃣ Update Vitest Badge
+      - name: Update Vitest Badge
+        run: |
+          VITEST_VERSION=$(node -p "require('./package.json').devDependencies.vitest")
+          echo "Updating README.md with Vitest version: $VITEST_VERSION"
+          sed -i -E "s#(!\[Vitest\]\(https://img.shields.io/badge/Vitest-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITEST_VERSION}\2#g" README.md
+          grep "Vitest" README.md
+
+      # 6️⃣ Update Pnpm Badge
+      - name: Update Pnpm Badge
+        run: |
+          PNPM_VERSION=$(pnpm -v)
+          echo "Updating README.md with Pnpm version: $PNPM_VERSION"
+          sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${PNPM_VERSION}\2#g" README.md
+          grep "Pnpm" README.md
+
+      # 6️⃣ Update Vite Badge
+      - name: Update Vite Badge
+        run: |
+          VITE_VERSION=$(node -p "require('./package.json').devDependencies.vite")
+          echo "Updating README.md with Vite version: $VITE_VERSION"
+          sed -i -E "s#(!\[Vite\]\(https://img.shields.io/badge/Vite-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITE_VERSION}\2#g" README.md
+          grep "Vite" README.md
+
+      # 6️⃣ Update Node.js Badge
+      - name: Update Node.js Badge
+        run: |
+          NODE_VERSION=$(node -v)
+          echo "Updating README.md with Node.js version: $NODE_VERSION"
+          sed -i -E "s#(!\[Node\.js\]\(https://img.shields.io/badge/Node\.js-)[^ ]+(-informational\?style=flat&logo=nodedotjs&color=3c873a\))#\1${NODE_VERSION}\2#g" README.md
+          grep "Node.js" README.md
+
+      # 6️⃣ Update TypeScript Badge
+      - name: Update TypeScript Badge
+        run: |
+          TS_VERSION=$(node -p "require('./package.json').devDependencies.typescript")
+          echo "Updating README.md with TypeScript version: $TS_VERSION"
+          sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" README.md
+          grep "TypeScript" README.md
+
+      # 6️⃣ Update Storybook Badge
+      - name: Update Storybook Badge
+        run: |
+          STORYBOOK_VERSION=$(node -p "require('./package.json').devDependencies['@storybook/react']")
+          echo "Updating README.md with Storybook version: $STORYBOOK_VERSION"
+          sed -i -E "s#(!\[Storybook\]\(https://img.shields.io/badge/Storybook-)[^ ]+(-FF4785\?style=flat&logo=storybook&logoColor=FF4785\))#\1${STORYBOOK_VERSION}\2#g" README.md
+          grep "Storybook" README.md
+
+      # 6️⃣ Update Tailwind CSS Badge
+      - name: Update Tailwind CSS Badge
+        run: |
+          TAILWIND_VERSION=$(node -p "require('./package.json').devDependencies.tailwindcss")
+          echo "Updating README.md with Tailwind CSS version: $TAILWIND_VERSION"
+          sed -i -E "s#(!\[Tailwind%20CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^ ]+(-38B2AC\?style=flat&logo=tailwind-css&logoColor=white\))#\1${TAILWIND_VERSION}\2#g" README.md
+          grep "Tailwind"
+
+      # 6️⃣ Update React.js Badge
+      - name: Update React.js Badge
+        run: |
+          REACT_VERSION=$(node -p "require('./package.json').dependencies.react")
+          echo "Updating README.md with React version: $REACT_VERSION"
+          sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" README.md
+          grep "React"
+
+
+  
       # 7️⃣ Commit & push the updated badge only if there are changes
       - name: Commit and push badge update
         run: |
