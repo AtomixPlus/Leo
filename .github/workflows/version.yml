@@ -46,11 +46,11 @@ jobs:
           git config user.email "github-actions@github.com"
 
       # 6️⃣ Update coverage badge in README.md
-      - name: Update Coverage Badge
+      - name: Update Version Badge
         run: |
           VERSION=$(node -p "require('./package.json').version")
-          echo "Coverage: $COVERAGE%"
-          sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+%-blue#\1${VERSION}%-blue#g" README.md
+          echo "Version: $VERSION%"
+          sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+%blue#\1${VERSION}%-blue#g" README.md
           echo "Updated README.md with new version"
           grep "Version" README.md
 
