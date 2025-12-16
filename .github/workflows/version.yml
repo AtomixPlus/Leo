@@ -103,12 +103,13 @@ jobs:
           sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" README.md
           grep "Typescript" || true
 
-      # 6️⃣ Update Tailwind CSS Badge
-      - name: Update Tailwind CSS Badge with Version
+      - name: Update Tailwind CSS Badge
         run: |
           TAILWIND_VERSION=$(node -p "let v=require('./package.json').devDependencies.tailwindcss.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with Tailwind CSS version: $TAILWIND_VERSION"
-          sed -i -E "s#(!\[Tailwind%20CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^ ]+(-38B2AC\?style=flat&logo=tailwind-css&logoColor=white\))#\1${TAILWIND_VERSION}\2#g" README.md || true
+          # Use a more robust regex and overwrite in-place
+          sed -i "s|\(\[!\[Tailwind CSS\](https://img.shields.io/badge/Tailwind%20CSS-\)[^?]*\(-38B2AC?style=flat&logo=tailwind-css&logoColor=white\]\)|\1${TAILWIND_VERSION}\2|" README.md
+          echo "Updated README.md:"
           grep "Tailwind" README.md || true
 
 
