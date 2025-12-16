@@ -112,12 +112,12 @@ jobs:
       #     grep "Tailwind"
 
       # 6️⃣ Update React.js Badge
-      - name: Update React.js Badge
-        run: |
-          REACT_VERSION=$(node -p "require('./package.json').dependencies.react")
-          echo "Updating README.md with React version: $REACT_VERSION"
-          sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" README.md
-          grep "React"
+      # - name: Update React.js Badge
+      #   run: |
+      #     REACT_VERSION=$(node -p "require('./package.json').dependencies.react")
+      #     echo "Updating README.md with React version: $REACT_VERSION"
+      #     sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" README.md
+      #     grep "React"
 
   
       # 7️⃣ Commit & push the updated badge only if there are changes
