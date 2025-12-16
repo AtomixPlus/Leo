@@ -106,7 +106,7 @@ jobs:
       # 6️⃣ Update Tailwind CSS Badge
       - name: Update Tailwind CSS Badge
         run: |
-          TAILWIND_VERSION=$(node -p "require('./package.json').devDependencies.tailwindcss")
+          TAILWIND_VERSION=$(node -p "require('./package.json').devDependencies.tailwindcss.replace('^','')")
           echo "Updating README.md with Tailwind CSS version: $TAILWIND_VERSION"
           sed -i -E "s#(!\[Tailwind%20CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^ ]+(-38B2AC\?style=flat&logo=tailwind-css&logoColor=white\))#\1${TAILWIND_VERSION}\2#g" README.md
           grep "Tailwind"
