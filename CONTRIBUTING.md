@@ -65,8 +65,7 @@ The repository enforces pnpm via the packageManager field.
 <br><br>
 
 
-# 🎨 Styling Guidelines
- [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+# 🎨 Styling Guidelines [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 - Styling is handled with Tailwind CSS
 - Avoid inline styles unless absolutely necessary
@@ -74,8 +73,7 @@ The repository enforces pnpm via the packageManager field.
 
 <br>
 
-# 🧹 Code Style & Quality
-[![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
+# 🧹 Code Quality [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
 
 - Written in TypeScript
 - Prefer functional components and hooks
@@ -86,7 +84,8 @@ The repository enforces pnpm via the packageManager field.
 <br>
 
 
-# 📚 Storybook
+# 📚 Storybook [![Storybook](https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
+
 **Leo** uses Storybook to develop, preview, and document UI components in isolation.
 
 **Storybook lets you:**
