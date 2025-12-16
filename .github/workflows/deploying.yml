@@ -15,7 +15,35 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+    
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Enable Corepack & pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm -v
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Install Playwright
+        run: pnpm exec playwright install --with-deps
+
+      - name: Run browser testing
+        run: pnpm test
+
   build:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
@@ -43,34 +71,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: storybook-static
-
-    
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Enable Corepack & pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
-          pnpm -v
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Install Playwright
-        run: pnpm exec playwright install --with-deps
-
-      - name: Run browser testing
-        run: pnpm test
 
 
   deploy:
