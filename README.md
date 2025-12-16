@@ -19,7 +19,7 @@ Every component is fully typed, tree-shakeable, and optimized for fast builds wi
 [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
 [![Storybook](https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.0.14-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![React.js](https://img.shields.io/badge/React.js-v4.0.14-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 
 - [Installation](#💻-Installation)
 - [Usage](#usage)
