@@ -11,15 +11,15 @@ A high-performance, developer-friendly React component library built with `TypeS
 Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
 # 📑 Table of Contents
-[![Vitest](https://img.shields.io/badge/Vitest-v1.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
-[![Pnpm](https://img.shields.io/badge/Pnpm-v1.25.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
-[![Vite](https://img.shields.io/badge/Vite-v1.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-v1.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
+[![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
+[![Pnpm](https://img.shields.io/badge/Pnpm-v10.25.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+[![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 
-[![TypeScript](https://img.shields.io/badge/Typescript-v1.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
-[![Storybook](https://img.shields.io/badge/Storybook-v1.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
+[![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
+[![Storybook](https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v1.0.14-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![React.js](https://img.shields.io/badge/React.js-v1.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 
 - [Installation](#💻-Installation)
 - [Usage](#usage)
