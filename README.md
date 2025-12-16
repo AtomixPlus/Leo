@@ -1,10 +1,14 @@
-# Leo <img src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/leo.png" width="100" height="150"/> [![Storybook](https://img.shields.io/badge/Storybook-Live-FF4785?logo=storybook)](https://atomixplus.github.io/Leo/) ![Version](https://img.shields.io/badge/Version-0.0.4-blue)
+# Leo <img src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/leo.png" width="100" height="150"/> 
 
 ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen)
 [![Testing](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main)
 [![Linting](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml?branch=main)
 [![Building](https://github.com/AtomixPlus/Leo/actions/workflows/building.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/building.yml?branch=main)
 [![Deploying](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml?branch=main)
+
+![Version](https://img.shields.io/badge/Version-0.0.4-blue)
+[![Storybook](https://img.shields.io/badge/Storybook-Live-FF4785?logo=storybook)](https://atomixplus.github.io/Leo/) 
+
 
 A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows. 
 
