@@ -1,7 +1,4 @@
-# Leo <img src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/leo.png" width="100" height="150"/>
-
-[![Storybook](https://img.shields.io/badge/Storybook-Live-FF4785?logo=storybook)](https://atomixplus.github.io/Leo/)
-![Version](https://img.shields.io/badge/Version-0.0.4-blue)
+# Leo <img src="https://raw.githubusercontent.com/AtomixPlus/Leo/refs/heads/main/src/assets/leo.png" width="100" height="150"/> [![Storybook](https://img.shields.io/badge/Storybook-Live-FF4785?logo=storybook)](https://atomixplus.github.io/Leo/) ![Version](https://img.shields.io/badge/Version-0.0.4-blue)
 
 ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen)
 [![Testing](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main)
