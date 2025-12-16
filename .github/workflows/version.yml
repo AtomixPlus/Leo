@@ -22,22 +22,22 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      # # 2️⃣ Setup Node.js
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 20
+      # 2️⃣ Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
-      # # 3️⃣ Enable Corepack & pnpm
-      # - name: Enable Corepack and pnpm
-      #   run: |
-      #     corepack enable
-      #     corepack prepare pnpm@latest --activate
-      #     pnpm -v
+      # 3️⃣ Enable Corepack & pnpm
+      - name: Enable Corepack and pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm -v
 
-      # # 4️⃣ Install dependencies
-      # - name: Install dependencies
-      #   run: pnpm install
+      # 4️⃣ Install dependencies
+      - name: Install dependencies
+        run: pnpm install
 
       # 5️⃣ Setup Git author info
       - name: Setup Git
@@ -48,9 +48,9 @@ jobs:
       # 6️⃣ Update coverage badge in README.md
       - name: Update Leo Version
         run: |
-          VERSION=$(node -p "require('./package.json').version")
-          echo "Version: $VERSION"
-          sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+\.[0-9]+\.[0-9]+(-blue\))#\1${VERSION}\2#g" README.md
+          LEO_VERSION=$(node -p "require('./package.json').version")
+          echo "Version: $LEO_VERSION"
+          sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+\.[0-9]+\.[0-9]+(-blue\))#\1${LEO_VERSION}\2#g" README.md
           echo "Updated README.md with new version"
           grep "Version" README.md
 
