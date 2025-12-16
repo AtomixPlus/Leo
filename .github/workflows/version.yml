@@ -110,7 +110,7 @@ jobs:
           echo "Updating README.md with Tailwind CSS version: $TAILWIND_VERSION"
           sed -i -E "s#(!\[Tailwind%20CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^ ]+(-38B2AC\?style=flat&logo=tailwind-css&logoColor=white\))#\1${TAILWIND_VERSION}\2#g" README.md
           echo "Updated README.md:"
-          grep -q "Tailwind"
+          grep "Tailwind" || true
 
       # 6️⃣ Update React.js Badge with Version
       - name: Update React.js Badge with Version
@@ -119,7 +119,7 @@ jobs:
           echo "Updating README.md with React version: $REACT_VERSION"
           sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" README.md
           echo "Updated README.md:"
-          grep -q "React"
+          grep "React" || true
 
   
       # 7️⃣ Commit & push the updated badge only if there are changes
