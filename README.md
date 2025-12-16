@@ -13,7 +13,7 @@ Every component is fully typed, tree-shakeable, and optimized for fast builds wi
 # 📑 Table of Contents
 [![Vitest](https://img.shields.io/badge/Vitest-^4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
 [![Pnpm](https://img.shields.io/badge/Pnpm-10.25.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
-[![Vite](https://img.shields.io/badge/Vite-^7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 
 [![TypeScript](https://img.shields.io/badge/Typescript-^5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
