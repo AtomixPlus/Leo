@@ -44,6 +44,19 @@ jobs:
         with:
           path: storybook-static
 
+    
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Playwright
+        run: pnpm exec playwright install --with-deps
+
+      - name: Run browser testing
+        run: pnpm test
+
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
