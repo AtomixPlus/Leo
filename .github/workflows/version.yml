@@ -23,10 +23,10 @@ jobs:
           persist-credentials: true
 
       # # 2️⃣ Setup Node.js
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 20
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
       # # 3️⃣ Enable Corepack & pnpm
       - name: Enable Corepack and pnpm
@@ -102,14 +102,6 @@ jobs:
           echo "Updating README.md with TypeScript version: $TS_VERSION"
           sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" README.md
           grep "TypeScript" README.md
-
-      # 6️⃣ Update Storybook Badge
-      - name: Update Storybook Badge with Version
-        run: |
-          STORYBOOK_VERSION=$(node -p "require('./package.json').devDependencies['@storybook/react']")
-          echo "Updating README.md with Storybook version: $STORYBOOK_VERSION"
-          sed -i -E "s#(!\[Storybook\]\(https://img.shields.io/badge/Storybook-)[^ ]+(-FF4785\?style=flat&logo=storybook&logoColor=FF4785\))#\1${STORYBOOK_VERSION}\2#g" README.md
-          grep "Storybook" README.md
 
       # 6️⃣ Update Tailwind CSS Badge
       - name: Update Tailwind CSS Badge
