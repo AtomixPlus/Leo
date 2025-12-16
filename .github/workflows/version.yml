@@ -28,16 +28,16 @@ jobs:
         with:
           node-version: 20
 
-      # 3️⃣ Enable Corepack & pnpm
-      - name: Enable Corepack and pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
-          pnpm -v
+      # # 3️⃣ Enable Corepack & pnpm
+      # - name: Enable Corepack and pnpm
+      #   run: |
+      #     corepack enable
+      #     corepack prepare pnpm@latest --activate
+      #     pnpm -v
 
-      # 4️⃣ Install dependencies
-      - name: Install dependencies
-        run: pnpm install
+      # # 4️⃣ Install dependencies
+      # - name: Install dependencies
+      #   run: pnpm install
 
       # 5️⃣ Setup Git author info
       - name: Setup Git
