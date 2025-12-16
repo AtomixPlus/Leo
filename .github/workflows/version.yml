@@ -1,0 +1,65 @@
+name: Versioning
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+permissions:
+  contents: write
+
+jobs:
+  coverage:
+    name: Verify 
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout repository with full history so we can push
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      # 2️⃣ Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # 3️⃣ Enable Corepack & pnpm
+      - name: Enable Corepack and pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm -v
+
+      # 4️⃣ Install dependencies
+      - name: Install dependencies
+        run: pnpm install
+
+      # 5️⃣ Setup Git author info
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      # 6️⃣ Update coverage badge in README.md
+      - name: Update Coverage Badge
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "Coverage: $COVERAGE%"
+          sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+%-blue#\1${VERSION}%-blue#g" README.md
+          echo "Updated README.md with new version"
+          grep "Version" README.md
+
+      # 7️⃣ Commit & push the updated badge only if there are changes
+      - name: Commit and push badge update
+        run: |
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore: update coverage badge [skip ci]"
+          git diff --cached --quiet || git push origin HEAD
+
+
+        
