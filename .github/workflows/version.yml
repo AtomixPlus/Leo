@@ -29,11 +29,11 @@ jobs:
       #     node-version: 20
 
       # # 3️⃣ Enable Corepack & pnpm
-      # - name: Enable Corepack and pnpm
-      #   run: |
-      #     corepack enable
-      #     corepack prepare pnpm@latest --activate
-      #     pnpm -v
+      - name: Enable Corepack and pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm -v
 
       # # 4️⃣ Install dependencies
       # - name: Install dependencies
@@ -64,7 +64,7 @@ jobs:
           grep "Version" README.md
 
       # 6️⃣ Update Vitest Badge
-      - name: Update Vitest Badge
+      - name: Update Vitest Badge with Version
         run: |
           VITEST_VERSION=$(node -p "require('./package.json').devDependencies.vitest")
           echo "Updating README.md with Vitest version: $VITEST_VERSION"
@@ -72,7 +72,7 @@ jobs:
           grep "Vitest" README.md
 
       # 6️⃣ Update Pnpm Badge
-      - name: Update Pnpm Badge
+      - name: Update Pnpm Badge with Version
         run: |
           PNPM_VERSION=$(pnpm -v)
           echo "Updating README.md with Pnpm version: $PNPM_VERSION"
@@ -80,7 +80,7 @@ jobs:
           grep "Pnpm" README.md
 
       # 6️⃣ Update Vite Badge
-      - name: Update Vite Badge
+      - name: Update Vite Badge with Version
         run: |
           VITE_VERSION=$(node -p "require('./package.json').devDependencies.vite")
           echo "Updating README.md with Vite version: $VITE_VERSION"
@@ -88,7 +88,7 @@ jobs:
           grep "Vite" README.md
 
       # 6️⃣ Update Node.js Badge
-      - name: Update Node.js Badge
+      - name: Update Node.js Badge with Version
         run: |
           NODE_VERSION=$(node -v)
           echo "Updating README.md with Node.js version: $NODE_VERSION"
@@ -96,7 +96,7 @@ jobs:
           grep "Node.js" README.md
 
       # 6️⃣ Update TypeScript Badge
-      - name: Update TypeScript Badge
+      - name: Update TypeScript Badge with Version
         run: |
           TS_VERSION=$(node -p "require('./package.json').devDependencies.typescript")
           echo "Updating README.md with TypeScript version: $TS_VERSION"
@@ -104,7 +104,7 @@ jobs:
           grep "TypeScript" README.md
 
       # 6️⃣ Update Storybook Badge
-      - name: Update Storybook Badge
+      - name: Update Storybook Badge with Version
         run: |
           STORYBOOK_VERSION=$(node -p "require('./package.json').devDependencies['@storybook/react']")
           echo "Updating README.md with Storybook version: $STORYBOOK_VERSION"
