@@ -109,7 +109,6 @@ jobs:
           TAILWIND_VERSION=$(node -p "let v=require('./package.json').devDependencies.tailwindcss.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with Tailwind CSS version: $TAILWIND_VERSION"
           sed -i -E "s#(!\[Tailwind%20CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^ ]+(-38B2AC\?style=flat&logo=tailwind-css&logoColor=white\))#\1${TAILWIND_VERSION}\2#g" README.md || true
-          echo "Updated README.md:"
           grep "Tailwind" README.md || true
 
 
@@ -119,7 +118,6 @@ jobs:
           REACT_VERSION=$(node -p "let v=require('./package.json').dependencies.react.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with React version: $REACT_VERSION"
           sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" README.md
-          echo "Updated README.md:"
           grep "React" || true
 
   
