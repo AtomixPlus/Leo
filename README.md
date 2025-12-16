@@ -11,15 +11,15 @@ A high-performance, developer-friendly React component library built with `TypeS
 Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
 # 📑 Table of Contents
-[![Vitest](https://img.shields.io/badge/Test-Vitest-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
-[![Pnpm](https://img.shields.io/badge/Manager-Pnpm-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
-[![Vite](https://img.shields.io/badge/Build-Vite-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
-[![Node.js](https://img.shields.io/badge/Build-Node.js-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
+[![Vitest](https://img.shields.io/badge/Vitest-v4.0.14-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
+[![Pnpm](https://img.shields.io/badge/Pnpm-v4.0.14-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+[![Vite](https://img.shields.io/badge/Vite-v4.0.14-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-v4.0.14-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 
-[![TypeScript](https://img.shields.io/badge/Code-Typescript-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
-[![Storybook](https://img.shields.io/badge/Library-Storybook-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Style-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![React.js](https://img.shields.io/badge/Library-React.js-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/Typescript-v4.0.14-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
+[![Storybook](https://img.shields.io/badge/Storybook-v4.0.14-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.0.14-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![React.js](https://img.shields.io/badge/React.js-v4.0.14-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 
 - [Installation](#💻-Installation)
 - [Usage](#usage)
