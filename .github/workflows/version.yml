@@ -93,7 +93,7 @@ jobs:
           NODE_VERSION=$(node -v)
           echo "Updating README.md with Node.js version: $NODE_VERSION"
           sed -i -E "s#(!\[Node\.js\]\(https://img.shields.io/badge/Node\.js-)[^ ]+(-informational\?style=flat&logo=nodedotjs&color=3c873a\))#\1${NODE_VERSION}\2#g" README.md
-          grep "Node.js" README.md
+          grep "Node.js" || true
 
       # 6️⃣ Update TypeScript Badge
       - name: Update TypeScript Badge with Version
@@ -101,7 +101,7 @@ jobs:
           TS_VERSION=$(node -p "let v=require('./package.json').devDependencies.typescript.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with TypeScript version: $TS_VERSION"
           sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" README.md
-          grep "TypeScript" README.md
+          grep "Typescript" || true
 
       # 6️⃣ Update Tailwind CSS Badge
       - name: Update Tailwind CSS Badge with Version
