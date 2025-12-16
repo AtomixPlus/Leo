@@ -66,7 +66,7 @@ jobs:
       # 6️⃣ Update Vitest Badge
       - name: Update Vitest Badge with Version
         run: |
-          VITEST_VERSION=$(node -p "require('./package.json').devDependencies.vitest.replace(/^\\^/, 'v')")
+          VITEST_VERSION=$(node -p "let v=require('./package.json').devDependencies.vitest.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with Vitest version: $VITEST_VERSION"
           sed -i -E "s#(!\[Vitest\]\(https://img.shields.io/badge/Vitest-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITEST_VERSION}\2#g" README.md
           grep "Vitest" README.md
@@ -82,7 +82,7 @@ jobs:
       # 6️⃣ Update Vite Badge
       - name: Update Vite Badge with Version
         run: |
-          VITE_VERSION=$(node -p "require('./package.json').devDependencies.vite.replace(/^\\^/, 'v')")
+          VITE_VERSION=$(node -p "let v=require('./package.json').devDependencies.vite.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with Vite version: $VITE_VERSION"
           sed -i -E "s#(!\[Vite\]\(https://img.shields.io/badge/Vite-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITE_VERSION}\2#g" README.md
           grep "Vite" README.md
@@ -98,7 +98,7 @@ jobs:
       # 6️⃣ Update TypeScript Badge
       - name: Update TypeScript Badge with Version
         run: |
-          TS_VERSION=$(node -p "require('./package.json').devDependencies.typescript")
+          TS_VERSION=$(node -p "let v=require('./package.json').devDependencies.typescript.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with TypeScript version: $TS_VERSION"
           sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" README.md
           grep "TypeScript" README.md
