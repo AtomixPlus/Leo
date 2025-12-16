@@ -57,7 +57,7 @@ jobs:
       # 4️⃣ Update version badge in README.md
       - name: Update Storybook Badge with Version
         run: |
-          STORYBOOK_VERSION=$(node -p "require('./package.json').devDependencies.storybook")
+          STORYBOOK_VERSION=$(node -p "require('./package.json').devDependencies.storybook.replace(/^\\^/, 'v')")
           echo "Updating README.md with version: $STORYBOOK_VERSION"
           sed -i -E "s#(!\[Storybook\]\(https://img.shields.io/badge/Storybook-)[^ ]+(-FF4785\?style=flat&logo=storybook&logoColor=FF4785\))#\1${STORYBOOK_VERSION}\2#g" README.md
           echo "Updated README.md:"
