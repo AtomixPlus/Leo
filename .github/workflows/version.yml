@@ -57,9 +57,17 @@ jobs:
       # 7️⃣ Commit & push the updated badge only if there are changes
       - name: Commit and push badge update
         run: |
+          # git add README.md
+          # git diff --cached --quiet || git commit -m "chore: update badge versions [skip ci]"
+          # git diff --cached --quiet || git push origin HEAD
+
           git add README.md
-          git diff --cached --quiet || git commit -m "chore: update badge versions [skip ci]"
-          git diff --cached --quiet || git push origin HEAD
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update version badge [skip ci]"
+            git push origin HEAD
+          else
+            echo "No changes to commit"
+          fi
 
 
         
