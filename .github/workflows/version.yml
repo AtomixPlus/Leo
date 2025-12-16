@@ -46,11 +46,20 @@ jobs:
           git config user.email "github-actions@github.com"
 
       # 6️⃣ Update version badge in README.md
-      - name: Update Version Badge
+      - name: Update Leo Badge with Version
         run: |
           LEO_VERSION=$(node -p "require('./package.json').version")
           echo "Updating README.md with version: $LEO_VERSION"
           sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+\.[0-9]+\.[0-9]+(-blue\))#\1${LEO_VERSION}\2#g" README.md
+          echo "Updated README.md:"
+          grep "Version" README.md
+
+      # 6️⃣ Update version badge in README.md
+      - name: Update Storybook Badge with Version
+        run: |
+          STORYBOOK_VERSION=$(node -p "require('./package.json').devDependencies.storybook")
+          echo "Updating README.md with version: $STORYBOOK_VERSION"
+          sed -i -E "s#(!\[Storybook\]\(https://img.shields.io/badge/Storybook-)[^ ]+(-FF4785\?style=flat&logo=storybook&logoColor=FF4785\))#\1${STORYBOOK_VERSION}\2#g" README.md
           echo "Updated README.md:"
           grep "Version" README.md
 
@@ -64,6 +73,3 @@ jobs:
           else
             echo "No changes to commit"
           fi
-
-
-        
