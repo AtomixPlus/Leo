@@ -82,7 +82,7 @@ jobs:
       # 6️⃣ Update Vite Badge
       - name: Update Vite Badge with Version
         run: |
-          VITE_VERSION=$(node -p "require('./package.json').devDependencies.vite")
+          VITE_VERSION=$(node -p "require('./package.json').devDependencies.vite.replace(/^\\^/, 'v')")")
           echo "Updating README.md with Vite version: $VITE_VERSION"
           sed -i -E "s#(!\[Vite\]\(https://img.shields.io/badge/Vite-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITE_VERSION}\2#g" README.md
           grep "Vite" README.md
