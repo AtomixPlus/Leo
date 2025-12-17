@@ -784,6 +784,7 @@ Each component should have its own story file (<b>Component.stories.tsx</b>) fol
 
 Leo uses Vitest and React Testing Library, along with Storybook stories, to provide a robust testing environment. Browser-based tests leverage the existing Storybook stories to ensure that components behave as expected in real-world usage. This approach ensures consistency between development, documentation, and automated testing.
 
+<br>
 
 
 ### ⚡ Running Tests
