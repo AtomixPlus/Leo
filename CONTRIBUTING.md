@@ -472,15 +472,15 @@ chore(deps): update tailwindcss to v4.1.17
 
 # 📌 Workflow Summary
 
-- [ ] Fork the repository
-- [ ] Create a branch from dev
-- [ ] Implement changes
-- [ ] Write/Update stories and tests
-- [ ] Run tests and storybook
-- [ ] Commit with clear message
-- [ ] Push branch and open PR against dev
-- [ ] Address review comments
-- [ ] PR merged after approval
+- [x] Fork the repository
+- [x] Create a branch from dev
+- [x] Implement changes
+- [x] Write/Update stories and tests
+- [x] Run tests and storybook
+- [x] Commit with clear message
+- [x] Push branch and open PR against dev
+- [x] Address review comments
+- [x] PR merged after approval
 
 
 
