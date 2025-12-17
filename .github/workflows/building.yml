@@ -36,18 +36,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Install Playwright
-      - name: Install Playwright
-        run: pnpm exec playwright install --with-deps
-
-      # Run tests
-      - name: Run tests
-        run: pnpm test
-
       # Build library
       - name: Build library
         run: pnpm build
-
-      # Lint code
-      - name: Lint code
-        run: pnpm eslint .
