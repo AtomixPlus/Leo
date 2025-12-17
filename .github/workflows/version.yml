@@ -86,8 +86,8 @@ jobs:
         run: |
           NPM_VERSION=v$(npm -v)
           echo "Updating README.md with npm version: $NPM_VERSION"
-          sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${NPM_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${NPM_VERSION}\2#g" CONTRIBUTING.md
+          sed -i -E "s#(!\[npm\]\(https://img.shields.io/badge/npm-)[^ ]+(-informational\?style=flat&logo=npm&logoColor=white\))#\1${NPM_VERSION}\2#g" README.md
+          sed -i -E "s#(!\[npm\]\(https://img.shields.io/badge/npm-)[^ ]+(-informational\?style=flat&logo=npm&logoColor=white\))#\1${NPM_VERSION}\2#g" CONTRIBUTING.md
           echo "Updated README.md and CONTRIBUTING.md: $NPM_VERSION"
 
       # 6️⃣ Update Vite Badge
@@ -130,6 +130,15 @@ jobs:
 
       # 6️⃣ Update React.js Badge with Version
       - name: Update React.js Badge with Version
+        run: |
+          REACT_VERSION=$(node -p "let v=require('./package.json').dependencies.react.replace(/^\^/, ''); 'v'+v")
+          echo "Updating README.md with React version: $REACT_VERSION"
+          sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" README.md
+          sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" CONTRIBUTING.md
+          grep "React" || true
+
+      # 6️⃣ Update React.js Badge with Version
+      - name: Update tslint.js Badge with Version
         run: |
           REACT_VERSION=$(node -p "let v=require('./package.json').dependencies.react.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with React version: $REACT_VERSION"
