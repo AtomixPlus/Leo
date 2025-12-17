@@ -111,16 +111,20 @@ git checkout -b chore/update-dependencies
 ### Creating a PR
 
 1️⃣ Fork the repository and clone your fork locally.
+
 2️⃣ Create a branch for your work:
 
 ```bash
 git checkout -b feature/my-new-component
 ```
+<br>
+
 3️⃣ Make your changes:
 - Add or update components.
 - Write or update stories in Storybook.
 - Add or update tests in Vitest.
 
+<br>
 
 4️⃣ Test your changes locally:
 
@@ -129,6 +133,7 @@ pnpm install
 pnpm test
 pnpm storybook
 ```
+<br>
 
 5️⃣ Commit changes with descriptive messages:
 ```bash
@@ -137,10 +142,14 @@ fix(InputField): correct validation on empty input
 ```
 Follow conventional commit style where possible: feat, fix, chore, docs, test, refactor.
 
+<br>
+
 6️⃣ Push your branch:
 ```bash
 git push origin feature/my-new-component
 ```
+
+<br>
 
 7️⃣ Open a PR against the dev branch on the main repository.
 
@@ -501,7 +510,7 @@ Ensure every story can be used as a test in browser tests
 
 
 
-# 🧹 Linting & Formatting [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
+# 🧹 Linting & Formatting [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/) [![Linting](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml?branch=main)
 
 
 Leo enforces consistent code style and best practices using ESLint, TypeScript rules, and Prettier. All contributions must pass linting before being merged.
@@ -553,7 +562,7 @@ pnpm lint --fix
 
 <!-- 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 -->
 
-# 🧪 Testing [![Testing](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main) ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen) 
+# 🧪 Testing [![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/) [![Testing](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main) ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen) 
 
 Leo uses Vitest and React Testing Library, along with Storybook stories, to provide a robust testing environment. Browser-based tests leverage the existing Storybook stories to ensure that components behave as expected in real-world usage. This approach ensures consistency between development, documentation, and automated testing.
 
