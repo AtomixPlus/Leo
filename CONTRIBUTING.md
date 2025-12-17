@@ -47,11 +47,12 @@ This guide outlines how to contribute effectively, including branching strategy,
 
 <br><br>
 
-# ⚙️ Prerequisites
+# ⚙️ Prerequisites [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/) [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+
 Make sure you have the following installed:
 
-- [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/) - (LTS recommended)
-- [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/) - (required — other package managers are not supported)
+- [Node.js](https://nodejs.org/) - (LTS recommended)
+- [Pnpm](https://pnpm.io/) - (required — other package managers are not supported)
 
 The repository enforces pnpm via the packageManager field.
 

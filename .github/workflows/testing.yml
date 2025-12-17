@@ -73,7 +73,7 @@ jobs:
       # 🔟 Commit & push the updated badge only if there are changes
       - name: Commit and push badge update
         run: |
-          git add README.md CONTRIBUTION.md
+          git add README.md CONTRIBUTING.md
           if ! git diff --cached --quiet; then
             git commit -m "chore: update version badge [skip ci]"
             git push origin HEAD
