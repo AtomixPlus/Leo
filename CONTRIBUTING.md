@@ -56,6 +56,7 @@ This guide outlines how to contribute effectively, including branching strategy,
 # 📑 Table of Contents
 
 [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+[![npm](https://img.shields.io/badge/npm-v10.26.0-informational?style=flat&logo=npm&color=CC3534)](https://pnpm.io/)
 [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
 [![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
@@ -63,6 +64,11 @@ This guide outlines how to contribute effectively, including branching strategy,
 [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
 [![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Prettier](https://img.shields.io/badge/Prettier-v3.x-F7B93E?style=flat&logo=prettier&logoColor=white)](https://prettier.io/)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.x-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/)
+[![Playwright](https://img.shields.io/badge/Playwright-E2E%20tests-2EAD33?style=flat)](https://playwright.dev/)
+
+
 
 
 - 1️⃣ [Installation & Prerequisites](#💻-installation--prerequisites)
@@ -134,14 +140,20 @@ This guide outlines how to contribute effectively, including branching strategy,
 #
 # ============================================================================
 -->
-# ⚙️ Prerequisites [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/) [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+# ⚙️ Prerequisites [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/) [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/) [![npm](https://img.shields.io/badge/npm-v10.26.0-informational?style=flat&logo=npm&color=CC3534)](https://pnpm.io/)
 
-Make sure you have the following installed:
+Before contributing, ensure you have the following tools installed and correctly configured.
 
-- [Node.js](https://nodejs.org/) - (LTS recommended)
-- [Pnpm](https://pnpm.io/) - (required — other package managers are not supported)
+Both **pnpm** and **npm** are fully supported. Use **one package manager consistently** per branch.
 
-The repository enforces pnpm via the packageManager field.
+
+| Tool     | Version          | Required | Notes |
+|----------|------------------|----------|-------|
+| [Node.js](https://nodejs.org/)  | LTS (v18+ / v20+) | ✅ Yes   | Use an active LTS release |
+| [pnpm](https://pnpm.io/)     | Latest stable    | ✅ Yes   | Fully supported package manager |
+| [npm](https://www.npmjs.com/)      | Bundled with Node.js | ✅ Yes | Fully supported alternative to pnpm |
+
+
 
 <br><br>
 
@@ -191,7 +203,8 @@ The repository enforces pnpm via the packageManager field.
 #
 # ============================================================================
 -->
-# ⚡ Installing Dependencies [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+# ⚡ Installation [![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/) [![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/) [![Storybook](https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/) [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/) [![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![Playwright](https://img.shields.io/badge/Playwright-v1.x-2EAD33?style=flat&logo=playwright&logoColor=white)](https://playwright.dev/)
+
 
 Leo uses pnpm as the primary package manager. Install all dependencies with:
 
@@ -210,7 +223,8 @@ npm install
 yarn install
 ```
 
-<br><br>
+
+
 <br><br>
 
 
@@ -228,7 +242,6 @@ yarn install
 - ✅ PR merged after approval
 
 
-<br><br>
 <br><br>
 
 <!--
@@ -292,7 +305,6 @@ git checkout -b chore/update-dependencies
 
 
 <br><br>
-<br><br>
 
 
 
@@ -351,7 +363,6 @@ git checkout -b chore/update-dependencies
 - **Testing Styles**: Verify styles in Storybook for visual correctness and interactive states.
 
 <br><br>
-<br><br>
 
 
 
@@ -407,7 +418,6 @@ git checkout -b chore/update-dependencies
 - **Tree-shakeable**: Components should avoid unnecessary dependencies.
 - **Documentation**: Update README and Storybook documentation if applicable.
 
-<br><br>
 <br><br>
 
 
@@ -747,6 +757,7 @@ Each component should have its own story file (<b>Component.stories.tsx</b>) fol
   <br>
 </details>
 
+<br>
 
 ### 💡 Best Practices
 - ✅ Group stories by component categories for easy navigation.
@@ -762,7 +773,8 @@ Each component should have its own story file (<b>Component.stories.tsx</b>) fol
 
 <!-- 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 -->
 
-# 🧪 Testing [![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/) [![Testing](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main) ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen) 
+# 🧪 Testing [![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/) [![Testing](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main) ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen) [![Playwright](https://img.shields.io/badge/Playwright-v1.x-2EAD33?style=flat&logo=playwright&logoColor=white)](https://playwright.dev/)
+
 
 Leo uses Vitest and React Testing Library, along with Storybook stories, to provide a robust testing environment. Browser-based tests leverage the existing Storybook stories to ensure that components behave as expected in real-world usage. This approach ensures consistency between development, documentation, and automated testing.
 
@@ -1039,7 +1051,7 @@ Each component should have its own test file (<b>Component.test.tsx</b>) followi
  # ============================================================================
 -->
 
-# 🧹 Linting & Formatting [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/) [![Linting](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml?branch=main)
+# 🧹 Linting & Formatting [![Prettier](https://img.shields.io/badge/Prettier-v3.x-F7B93E?style=flat&logo=prettier&logoColor=white)](https://prettier.io/) [![ESLint](https://img.shields.io/badge/ESLint-v9.x-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/) [![Linting](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml?branch=main)
 
 
 Leo enforces consistent code style and best practices using ESLint, TypeScript rules, and Prettier. All contributions must pass linting before being merged.

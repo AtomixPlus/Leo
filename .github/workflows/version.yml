@@ -81,6 +81,15 @@ jobs:
           sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${PNPM_VERSION}\2#g" CONTRIBUTING.md
           echo "Updated README.md and CONTRIBUTING.md: $PNPM_VERSION"
 
+      # 6️⃣ Update Pnpm Badge
+      - name: Update npm Badge with Version
+        run: |
+          NPM_VERSION=v$(npm -v)
+          echo "Updating README.md with npm version: $NPM_VERSION"
+          sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${NPM_VERSION}\2#g" README.md
+          sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${NPM_VERSION}\2#g" CONTRIBUTING.md
+          echo "Updated README.md and CONTRIBUTING.md: $NPM_VERSION"
+
       # 6️⃣ Update Vite Badge
       - name: Update Vite Badge with Version
         run: |
