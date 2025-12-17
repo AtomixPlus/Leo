@@ -1245,7 +1245,7 @@ Consistent commit messages help maintain a clean project history and make it eas
 
 
 
-### 🧹 Chores and Minor Fixes
+### Chores and Minor Fixes
 
 - For small changes (e.g., fixing typos, updating README, or bumping versions):
 - Use the chore/ prefix in branch names.
