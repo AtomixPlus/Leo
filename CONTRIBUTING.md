@@ -12,8 +12,7 @@ Thank you for your interest in contributing to this project! 🎉
 
 **We welcome contributions of all kinds — bug fixes, features, documentation, and improvements.**
 
-This guide explains how to contribute effectively, how the project is structured, and what to expect when working with the repository. We welcome contributions to improve this component library! Whether you want to add new components, fix bugs, improve documentation, or enhance tests, your help is appreciated.
-
+This guide outlines how to contribute effectively, including branching strategy, pull requests, code quality, and best practices for adding new features or fixing issues. Following these guidelines ensures a smooth workflow for both contributors and maintainers.
 
 
 
@@ -51,12 +50,11 @@ This guide explains how to contribute effectively, how the project is structured
 <br>
 
 
-# ⚙️ Prerequisites [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/) [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
-
+# ⚙️ Prerequisites
 Make sure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (LTS recommended)
-- [pnpm](https://pnpm.io/) (required — other package managers are not supported)
+- [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/) - (LTS recommended)
+- [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/) - (required — other package managers are not supported)
 
 The repository enforces pnpm via the packageManager field.
 
@@ -417,6 +415,7 @@ Ensure every story can be used as a test in browser tests
 
 
 
+<!-- 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 -->
 
 # 🧪 Testing
 
@@ -426,16 +425,81 @@ Leo uses Vitest and React Testing Library, along with Storybook stories, to prov
 
 
 
+# 🌿 Branching Strategy
+
+We follow a feature-driven branching workflow:
+
+- **main:** The stable production branch. Only fully tested and reviewed code is merged here.
+- **dev:** The main development branch. All feature branches should merge here first for testing and review.
+- **Feature branches:** Use descriptive names prefixed with the type of work:
+
+```bash
+feature/add-button-component
+fix/fix-button-disabled-state
+chore/update-dependencies
+```
+- Always branch from dev.
+- Keep branches small and focused on a single feature, fix, or chore.
+
+
+
+# 📝 Pull Requests (PRs)
+
+### Creating a PR
+
+1️⃣ Fork the repository and clone your fork locally.
+2️⃣ Create a branch for your work:
+
+```bash
+git checkout -b feature/my-new-component
+```
+3️⃣ Make your changes:
+- Add or update components.
+- Write or update stories in Storybook.
+- Add or update tests in Vitest.
+
+# 🧹 Chores and Minor Fixes
+
+- For small changes (e.g., fixing typos, updating README, or bumping versions):
+- Use the chore/ prefix in branch names.
+
+Commit with messages like:
+
+```bash
+chore(readme): fix typo in installation instructions
+chore(deps): update tailwindcss to v4.1.17
+```
+
+# 📌 Workflow Summary
+
+- [ ] Fork the repository
+- [ ] Create a branch from dev
+- [ ] Implement changes
+- [ ] Write/Update stories and tests
+- [ ] Run tests and storybook
+- [ ] Commit with clear message
+- [ ] Push branch and open PR against dev
+- [ ] Address review comments
+- [ ] PR merged after approval
+
+
+
+# 🛡 Security and Reporting Issues
+
+- Report any security vulnerability to the maintainers via email: ijeffrouk@gmail.com.
+- Do not open a public issue for security vulnerabilities.
 
 
 
 
 
 
+# ✅ Final Notes
 
-
-
-
+- Contributions are welcome from everyone.
+- Respect the code style and testing practices.
+- Ensure PRs are small, focused, and well-tested.
+- Storybook is the source of truth for component behavior and documentation.
 
 
 
@@ -443,7 +507,8 @@ Leo uses Vitest and React Testing Library, along with Storybook stories, to prov
 
 # 🙌 Thank You
 
-Your contributions make Leo better for everyone.
+Your contributions make **Leo** better for everyone.
+
 Whether you’re fixing a typo or building a new component — we appreciate your time and effort.
 
 **Happy coding!** 🚀
@@ -549,62 +614,6 @@ pnpm storybook
 
 
 
-## 📖 Storybook
-
-Storybook allows you to preview and interact with components in isolation, making it easier to develop, test, and document your UI library.
-
-### 1️⃣ Running Storybook
-
-Start the Storybook server:
-```bash
-pnpm storybook
-```
-- Opens a local development server (usually at http://localhost:6006)
-- Hot-reloads changes in your components automatically
-
-### 2️⃣ Building Storybook
-
-Generate a static build for deployment:
-
-```bash
-pnpm build:storybook
-```
-- The static site is output to storybook-static/
-- Can be deployed to Netlify, Vercel, GitHub Pages, or any static hosting
-
-### 3️⃣ Writing Stories
-
-Story files live alongside your components, using the .stories.tsx extension.
-
-Example: `Button.stories.tsx`
-
-```typescript
-import { Meta, StoryObj } from '@storybook/react';
-import Button from './Button';
-
-const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
-  component: Button,
-};
-export default meta;
-
-type Story = StoryObj<typeof Button>;
-
-export const Primary: Story = {
-  args: {
-    children: 'Click Me',
-    onClick: () => alert('Button clicked!'),
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    children: 'Disabled',
-    disabled: true,
-  },
-};
-```
-
 - Meta defines the component and its title in Storybook
 - Each export represents a different story/state of the component
 
@@ -637,63 +646,3 @@ Generate coverage reports:
 ```bash
 pnpm vitest run --coverage
 ```
-- Coverage reports are saved in the coverage/ folder.
-- You can integrate coverage with Codecov or Coveralls for CI pipelines.
-
-### 2️⃣ Adding New Tests
-All new tests should live next to the component they test, using the .test.tsx or .spec.tsx extension.
-
-Example folder structure:
-```bash
-src/components/Button/Button.tsx
-src/components/Button/Button.test.tsx
-```
-Example test:
-```typescript
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import { describe, it, expect, vi } from 'vitest'
-import Button from './Button'
-
-describe('Button Component', () => {
-  it('renders with correct text', () => {
-    render(<Button>Click Me</Button>)
-    expect(screen.getByText('Click Me')).toBeInTheDocument()
-  })
-
-  it('calls onClick when clicked', async () => {
-    const handleClick = vi.fn()
-    render(<Button onClick={handleClick}>Click Me</Button>)
-
-    await userEvent.click(screen.getByText('Click Me'))
-    expect(handleClick).toHaveBeenCalledTimes(1)
-  })
-})
-```
-
-### 3️⃣ Guidelines for Writing Tests
-
-1. Use descriptive names for describe and it blocks:
-
-```typescript
-describe('Checkbox', () => {
-  it('renders with correct label', () => { ... })
-})
-```
-
-2. Use React Testing Library queries for accessibility:
-    - `screen.getByText`, `screen.getByRole`, `screen.getByLabelText`, etc.
-
-3. Use user-event to simulate realistic user interactions instead of fireEvent.
-
-4. Mock external dependencies when necessary:
-    - Functions: vi.fn()
-    - Modules: vi.mock()
-
-5. Test behavior, not implementation:
-    - Focus on what the component does, not how it does it.
-
-
-
-<br/><br/>
-
