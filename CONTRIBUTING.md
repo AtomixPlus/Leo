@@ -15,9 +15,7 @@ Thank you for your interest in contributing to this project! 🎉
 This guide outlines how to contribute effectively, including branching strategy, pull requests, code quality, and best practices for adding new features or fixing issues. Following these guidelines ensures a smooth workflow for both contributors and maintainers.
 
 
-
-<br>
-
+<br><br>
 
 <!-- 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 -->
 
@@ -47,8 +45,7 @@ This guide outlines how to contribute effectively, including branching strategy,
 - [License](#📜-License)
 
 
-<br>
-
+<br><br>
 
 # ⚙️ Prerequisites
 Make sure you have the following installed:
@@ -72,7 +69,8 @@ The repository enforces pnpm via the packageManager field.
 - **Theme Tokens**: Use theme colors, spacing, and fonts from Tailwind config rather than hard-coded values.
 - **Testing Styles**: Verify styles in Storybook for visual correctness and interactive states.
 
-<br>
+<br><br>
+
 
 # 🧹 Code Quality
 [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
@@ -88,7 +86,6 @@ The repository enforces pnpm via the packageManager field.
 - **Documentation**: Update README and Storybook documentation if applicable.
 
 <br><br>
-
 
 
 # 🌿 Branching Strategy
@@ -264,9 +261,7 @@ Using Button as an example:
 
 ---
 
-
 <br>
-
 
 
 #### 2️⃣ Meta Definition
@@ -299,7 +294,6 @@ export default meta;
 <br>
 
 
-
 #### 3️⃣ Helper Functions (Optional but Recommended)
 - ✔️  Reusable functions for common assertions help reduce repetition.
 - ✔️  **Example:** `assertComponentExists` for checking if component rendered.
@@ -314,7 +308,6 @@ const assertButtonExists = async (canvasElement: HTMLElement) => {
 ```
 
 <br>
-
 
 
 4️⃣ Defining Stories
@@ -339,7 +332,6 @@ export const Default: Story = {
 <br>
 
 
-
 #### 5️⃣ Variant Stories
 
 - ✔️ Follow a consistent naming scheme for variants (e.g., **Secondary**, **Destructive**, **Outline**).
@@ -360,8 +352,6 @@ export const Secondary: Story = {
 ```
 
 <br>
-
-
 
 
 #### 6️⃣ Size/State Stories
@@ -551,6 +541,7 @@ chore/update-dependencies
 - Always branch from dev.
 - Keep branches small and focused on a single feature, fix, or chore.
 
+<br><br>
 
 
 # 📝 Pull Requests (PRs)
@@ -591,8 +582,7 @@ git push origin feature/my-new-component
 
 7️⃣ Open a PR against the dev branch on the main repository.
 
-
-<br>
+<br><br>
 
 
 # 🧹 Chores and Minor Fixes
@@ -607,6 +597,9 @@ chore(readme): fix typo in installation instructions
 chore(deps): update tailwindcss to v4.1.17
 ```
 
+<br><br>
+
+
 # 📌 Workflow Summary
 
 - [x] Fork the repository
@@ -619,6 +612,7 @@ chore(deps): update tailwindcss to v4.1.17
 - [x] Address review comments
 - [x] PR merged after approval
 
+<br><br>
 
 
 # 🛡 Security and Reporting Issues
@@ -626,9 +620,7 @@ chore(deps): update tailwindcss to v4.1.17
 - Report any security vulnerability to the maintainers via email: ijeffrouk@gmail.com.
 - Do not open a public issue for security vulnerabilities.
 
-
-
-
+<br><br>
 
 
 # ✅ Final Notes
@@ -638,8 +630,7 @@ chore(deps): update tailwindcss to v4.1.17
 - Ensure PRs are small, focused, and well-tested.
 - Storybook is the source of truth for component behavior and documentation.
 
-
-
+<br><br>
 
 
 # 🙌 Thank You
@@ -649,137 +640,3 @@ Your contributions make **Leo** better for everyone.
 Whether you’re fixing a typo or building a new component — we appreciate your time and effort.
 
 **Happy coding!** 🚀
-
-
-
-
-[![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
-[![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
-[![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
-[![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
-[![Storybook](https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
-[![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
-[![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
-
-
-<style>
-  /* Hidden by default */
-  .sue-image {
-    width: auto;
-    height: 100%;
-    display: none;
-    /* -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%); */
-  }
-
-
-  /* Display at desktop breakpoint */
-  @media (min-width: 1630px) {
-    .sue-image {
-      display: block;
-      opacity: 0;
-      animation: fadeIn 0.6s ease-out forwards;
-    }
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-</style>
-
-
-
-
-
-
-### 1️⃣ How to Contribute
-
-1. **Clone your fork locally**:
-
-```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-```
-
-2. Install dependencies:
-```bash
-pnpm install
-```
-4. Create a new branch for your feature or fix:
-```bash
-git checkout -b feature/my-new-component
-```
-
-### 2️⃣ Coding Guidelines
-- Use TypeScript for all components and utilities.
-- Follow the existing folder structure: src/components/ComponentName.
-- Keep components small and reusable.
-- Write clear, descriptive prop names and fully type all props.
-
-
-### 3️⃣ Testing Your Changes
-- Add tests for new features or bug fixes (see the Testing section).
-- Run all tests before committing:
-
-```bash
-pnpm test
-```
-- Ensure coverage remains high.
-
-### 4️⃣ Storybook
-
-- Add stories for any new components:
-    - - Place .stories.tsx files next to the component.
-    - -  Make sure stories demonstrate all important states of the component.
-- Run Storybook to preview your component locally:
-
-```bash
-pnpm storybook
-```
-
-5️⃣ Pull Request Guidelines
-
-
-
-
-
-
-
-
-
-- Meta defines the component and its title in Storybook
-- Each export represents a different story/state of the component
-
-
-### 4️⃣ Tips
-
-- Use args to define props for stories — makes controls interactive
-- Organize stories in folders to match your component structure
-- Leverage addons like @storybook/addon-essentials for documentation, controls, and accessibility
-
-<br/><br/>
-
-
-
-# 🧪 Testing
-
-### 1️⃣ Running Tests
-
-Run all tests:
-```bash
-pnpm test
-```
-
-Run tests in watch mode during development:
-```bash
-pnpm test:watch
-```
-
-Generate coverage reports:
-```bash
-pnpm vitest run --coverage
-```
