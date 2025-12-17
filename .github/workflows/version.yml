@@ -51,8 +51,8 @@ jobs:
           LEO_VERSION=$(node -p "require('./package.json').version")
           echo "Updating README.md with version: $LEO_VERSION"
           sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+\.[0-9]+\.[0-9]+(-blue\))#\1${LEO_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+\.[0-9]+\.[0-9]+(-blue\))#\1${LEO_VERSION}\2#g" CONTRIBUTION.md
-          echo "Updated README.md and CONTRIBUTION.md: $LEO_VERSION"
+          sed -i -E "s#(!\[Version\]\(https://img.shields.io/badge/Version-)[0-9]+\.[0-9]+\.[0-9]+(-blue\))#\1${LEO_VERSION}\2#g" CONTRIBUTING.md
+          echo "Updated README.md and CONTRIBUTING.md: $LEO_VERSION"
 
       # 4️⃣ Update version badge in README.md
       - name: Update Storybook Badge with Version
@@ -60,8 +60,8 @@ jobs:
           STORYBOOK_VERSION=$(node -p "let v=require('./package.json').devDependencies.storybook.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with version: $STORYBOOK_VERSION"
           sed -i -E "s#(!\[Storybook\]\(https://img.shields.io/badge/Storybook-)[^ ]+(-FF4785\?style=flat&logo=storybook&logoColor=FF4785\))#\1${STORYBOOK_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[Storybook\]\(https://img.shields.io/badge/Storybook-)[^ ]+(-FF4785\?style=flat&logo=storybook&logoColor=FF4785\))#\1${STORYBOOK_VERSION}\2#g" CONTRIBUTION.md
-          echo "Updated README.md and CONTRIBUTION.md: $STORYBOOK_VERSION"
+          sed -i -E "s#(!\[Storybook\]\(https://img.shields.io/badge/Storybook-)[^ ]+(-FF4785\?style=flat&logo=storybook&logoColor=FF4785\))#\1${STORYBOOK_VERSION}\2#g" CONTRIBUTING.md
+          echo "Updated README.md and CONTRIBUTING.md: $STORYBOOK_VERSION"
 
       # 6️⃣ Update Vitest Badge
       - name: Update Vitest Badge with Version
@@ -69,8 +69,8 @@ jobs:
           VITEST_VERSION=$(node -p "let v=require('./package.json').devDependencies.vitest.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with Vitest version: $VITEST_VERSION"
           sed -i -E "s#(!\[Vitest\]\(https://img.shields.io/badge/Vitest-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITEST_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[Vitest\]\(https://img.shields.io/badge/Vitest-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITEST_VERSION}\2#g" CONTRIBUTION.md
-          echo "Updated README.md and CONTRIBUTION.md: $VITEST_VERSION"
+          sed -i -E "s#(!\[Vitest\]\(https://img.shields.io/badge/Vitest-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITEST_VERSION}\2#g" CONTRIBUTING.md
+          echo "Updated README.md and CONTRIBUTING.md: $VITEST_VERSION"
 
       # 6️⃣ Update Pnpm Badge
       - name: Update Pnpm Badge with Version
@@ -78,8 +78,8 @@ jobs:
           PNPM_VERSION=v$(pnpm -v)
           echo "Updating README.md with Pnpm version: $PNPM_VERSION"
           sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${PNPM_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${PNPM_VERSION}\2#g" CONTRIBUTION.md
-          echo "Updated README.md and CONTRIBUTION.md: $PNPM_VERSION"
+          sed -i -E "s#(!\[Pnpm\]\(https://img.shields.io/badge/Pnpm-)[^ ]+(-informational\?style=flat&logo=pnpm&color=F9AD00\))#\1${PNPM_VERSION}\2#g" CONTRIBUTING.md
+          echo "Updated README.md and CONTRIBUTING.md: $PNPM_VERSION"
 
       # 6️⃣ Update Vite Badge
       - name: Update Vite Badge with Version
@@ -87,8 +87,8 @@ jobs:
           VITE_VERSION=$(node -p "let v=require('./package.json').devDependencies.vite.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with Vite version: $VITE_VERSION"
           sed -i -E "s#(!\[Vite\]\(https://img.shields.io/badge/Vite-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITE_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[Vite\]\(https://img.shields.io/badge/Vite-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITE_VERSION}\2#g" CONTRIBUTION.md
-          echo "Updated README.md and CONTRIBUTION.md: $VITE_VERSION"
+          sed -i -E "s#(!\[Vite\]\(https://img.shields.io/badge/Vite-)[^ ]+(-informational\?style=flat&logo=vite&color=646CFF\))#\1${VITE_VERSION}\2#g" CONTRIBUTING.md
+          echo "Updated README.md and CONTRIBUTING.md: $VITE_VERSION"
 
       # 6️⃣ Update Node.js Badge
       - name: Update Node.js Badge with Version
@@ -96,7 +96,7 @@ jobs:
           NODE_VERSION=$(node -v)
           echo "Updating README.md with Node.js version: $NODE_VERSION"
           sed -i -E "s#(!\[Node\.js\]\(https://img.shields.io/badge/Node\.js-)[^ ]+(-informational\?style=flat&logo=nodedotjs&color=3c873a\))#\1${NODE_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[Node\.js\]\(https://img.shields.io/badge/Node\.js-)[^ ]+(-informational\?style=flat&logo=nodedotjs&color=3c873a\))#\1${NODE_VERSION}\2#g" CONTRIBUTION.md
+          sed -i -E "s#(!\[Node\.js\]\(https://img.shields.io/badge/Node\.js-)[^ ]+(-informational\?style=flat&logo=nodedotjs&color=3c873a\))#\1${NODE_VERSION}\2#g" CONTRIBUTING.md
           grep "Node.js" || true
 
       # 6️⃣ Update TypeScript Badge
@@ -105,7 +105,7 @@ jobs:
           TS_VERSION=$(node -p "let v=require('./package.json').devDependencies.typescript.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with TypeScript version: $TS_VERSION"
           sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" CONTRIBUTION.md
+          sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" CONTRIBUTING.md
           grep "Typescript" || true
 
       - name: Update Tailwind CSS Badge
@@ -114,7 +114,7 @@ jobs:
           echo "Updating README.md with Tailwind CSS version: $TAILWIND_VERSION"
           # Use a more robust regex and overwrite in-place
           sed -i -E "s#(\[!\[Tailwind CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^?-]+#\1${TAILWIND_VERSION}#g" README.md
-          sed -i -E "s#(\[!\[Tailwind CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^?-]+#\1${TAILWIND_VERSION}#g" CONTRIBUTION.md
+          sed -i -E "s#(\[!\[Tailwind CSS\]\(https://img.shields.io/badge/Tailwind%20CSS-)[^?-]+#\1${TAILWIND_VERSION}#g" CONTRIBUTING.md
           echo "Updated README.md:"
           grep "Tailwind" README.md || true
 
@@ -125,14 +125,14 @@ jobs:
           REACT_VERSION=$(node -p "let v=require('./package.json').dependencies.react.replace(/^\^/, ''); 'v'+v")
           echo "Updating README.md with React version: $REACT_VERSION"
           sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" README.md
-          sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" CONTRIBUTION.md
+          sed -i -E "s#(!\[React\.js\]\(https://img.shields.io/badge/React\.js-)[^ ]+(-61DAFB\?logo=react&logoColor=white\))#\1${REACT_VERSION}\2#g" CONTRIBUTING.md
           grep "React" || true
 
   
       # 7️⃣ Commit & push the updated badge only if there are changes
       - name: Commit and push badge update
         run: |
-          git add README.md CONTRIBUTION.md
+          git add README.md CONTRIBUTING.md
           if ! git diff --cached --quiet; then
             git commit -m "chore: update version badge [skip ci]"
             git push origin HEAD

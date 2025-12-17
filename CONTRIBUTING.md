@@ -21,8 +21,8 @@ This guide outlines how to contribute effectively, including branching strategy,
 
 # 📑 Table of Contents
 
-[![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
-[![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
+[![Pnpm](https://img.shields.io/badge/Pnpm-v1.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+[![Node.js](https://img.shields.io/badge/Node.js-v2.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
 [![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
 [![Storybook](https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
