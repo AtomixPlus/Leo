@@ -15,7 +15,7 @@ A high-performance, developer-friendly React component library built with `TypeS
 Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
 
 # 📑 Table of Contents
-[![Pnpm](https://img.shields.io/badge/Pnpm-v10.8.2-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+[![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
 [![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 

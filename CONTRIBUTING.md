@@ -55,7 +55,7 @@ This guide outlines how to contribute effectively, including branching strategy,
 -->
 # 📑 Table of Contents
 
-[![Pnpm](https://img.shields.io/badge/Pnpm-v10.8.2-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+[![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
 [![npm](https://img.shields.io/badge/npm-v10.26.0-informational?style=flat&logo=npm&color=CC3534)](https://pnpm.io/)
 [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
@@ -140,7 +140,7 @@ This guide outlines how to contribute effectively, including branching strategy,
 #
 # ============================================================================
 -->
-# ⚙️ Prerequisites [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/) [![Pnpm](https://img.shields.io/badge/Pnpm-v10.8.2-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/) [![npm](https://img.shields.io/badge/npm-v10.26.0-informational?style=flat&logo=npm&color=CC3534)](https://pnpm.io/)
+# ⚙️ Prerequisites [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/) [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/) [![npm](https://img.shields.io/badge/npm-v10.26.0-informational?style=flat&logo=npm&color=CC3534)](https://pnpm.io/)
 
 Before contributing, ensure you have the following tools installed and correctly configured.
 
