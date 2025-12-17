@@ -41,6 +41,15 @@ Every component is fully typed, tree-shakeable, and optimized for fast builds wi
 - [License](#📜-License)
 
 
+# Overview
+
+Leo includes a comprehensive testing setup powered by Vitest and React Testing Library, helping ensure components are reliable, predictable, and production-ready.
+
+Styling is handled with Tailwind CSS, enabling rapid development while keeping components flexible and easy to customize. Interactive documentation and visual testing are supported through Storybook, which serves as a reference for available components and their APIs.
+
+Leo is well-suited for teams and individuals looking for a fast, consistent, and maintainable UI layer in modern React applications.
+
+
 The library comes with a robust testing setup using `Vitest` and `React Testing Library`, ensuring components are reliable, maintainable, and production-ready. `Tailwind CSS` integration allows for rapid, consistent styling while keeping components flexible and customizable. 
 
 Perfect for developers who want a scalable, fast, and flexible UI foundation for modern React projects, with developer experience and productivity in mind.
