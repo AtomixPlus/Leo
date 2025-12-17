@@ -1112,6 +1112,68 @@ pnpm lint --fix
 
 
 
+# 🐞 Creating Issues [![Open Issues](https://img.shields.io/github/issues/AtomixPlus/Leo.svg?style=flat&color=red)](https://github.com/AtomixPlus/Leo/issues) [![Closed Issues](https://img.shields.io/github/issues-closed/AtomixPlus/Leo.svg?style=flat&color=green)](https://github.com/AtomixPlus/Leo/issues?q=is%3Aissue+is%3Aclosed)
+
+We love contributions! If you encounter a bug, have a feature request, or want to propose an improvement, please create an issue in this repository.
+
+### Steps to Create an Issue
+
+<details>
+  <summary><b>1️⃣ Check existing issues</b></summary>
+    Before opening a new issue, search the open issues to see if it has already been reported.
+  <br>
+</details>
+
+<details>
+  <summary><b>2️⃣ Open a new issue</b></summary>
+    Click the “New issue” button in the Issues tab.
+  <br>
+</details>
+
+<details>
+  <summary><b>3️⃣ Choose a template (if available)</b></summary>
+  
+  - Bug Report: Describe the problem, steps to reproduce, and expected vs. actual behavior.
+  - Feature Request: Explain the feature, why it’s useful, and any ideas for implementation.
+  <br>
+</details>
+
+<details>
+  <summary><b>4️⃣ Provide details</b></summary>
+  
+  Include:
+  - Environment (OS, browser, versions, etc.) if relevant
+  - Code snippets or screenshots
+  - Steps to reproduce (for bugs)
+
+  <br>
+</details>
+
+
+<details>
+  <summary><b>5️⃣ Submit the issue</b></summary>
+  
+  After filling in the details, click Submit new issue.
+
+  <br>
+</details>
+
+<br>
+
+
+### 💡 Best Practices
+
+- Be clear and concise.
+- Be respectful and constructive.
+- Include links to relevant discussions or resources if applicable.
+
+💡 Tip: Well-documented issues help us resolve them faster!
+
+<br><br>
+
+
+
+
 
 # 📝 Pull Requests [![Pull Requests](https://img.shields.io/github/issues-pr/AtomixPlus/Leo?branch=main)](https://github.com/AtomixPlus/Leo/pulls) ![Closed PRs](https://img.shields.io/github/issues-pr-closed/AtomixPlus/Leo?branch=main)
 

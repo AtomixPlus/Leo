@@ -63,10 +63,25 @@ pnpm i @vortz/leo
 ```
 <br/>
 
+
+# 🐞 Creating Issues [![Open Issues](https://img.shields.io/github/issues/AtomixPlus/Leo.svg?style=flat&color=red)](https://github.com/AtomixPlus/Leo/issues) [![Closed Issues](https://img.shields.io/github/issues-closed/AtomixPlus/Leo.svg?style=flat&color=green)](https://github.com/AtomixPlus/Leo/issues?q=is%3Aissue+is%3Aclosed)
+
+If you find a bug or have a feature request:
+
+1. Check existing issues to avoid duplicates.
+2. Click “New issue” in the Issues tab.
+3. Fill in details: steps to reproduce, expected behavior, screenshots, and environment info.
+4. Submit the issue.
+
+💡 Tip: Clear, detailed issues help us resolve them faster!
+
+<br/>
+
+
 # 🤝 Contributing
 We welcome contributions to improve this component library! Whether you want to add new components, fix bugs, improve documentation, or enhance tests, your help is appreciated. 
 
-Read the contributing guide to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
+Read the [contributing guide](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
 
 Contributing to Leo is about more than just issues and pull requests! There are many other ways to support Leo beyond contributing to the code base.
 
