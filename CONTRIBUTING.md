@@ -515,7 +515,7 @@ Ensure every story can be used as a test in browser tests
 
 <!-- 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟 -->
 
-# 🧪 Testing ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen) [![Testing](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main)
+# 🧪 Testing [![Testing](https://github.com/AtomixPlus/Leo/actions/workflows/testing.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/coverage.yml?branch=main) ![Code_Coverage](https://img.shields.io/badge/Code_Coverage-100%25-brightgreen) 
 
 Leo uses Vitest and React Testing Library, along with Storybook stories, to provide a robust testing environment. Browser-based tests leverage the existing Storybook stories to ensure that components behave as expected in real-world usage. This approach ensures consistency between development, documentation, and automated testing.
 
