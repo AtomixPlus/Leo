@@ -106,7 +106,7 @@ git checkout -b chore/update-dependencies
 <br><br>
 
 
-# 📝 Pull Requests (PRs)
+# 📝 Pull Requests (PRs) 
 
 ### Creating a PR
 
@@ -477,7 +477,7 @@ export const Secondary: Story = {
 
 
 
-<br>
+<br><br>
 
 
 Best Practices for Leo
@@ -501,15 +501,53 @@ Ensure every story can be used as a test in browser tests
 
 
 
+# 🧹 Linting & Formatting [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
 
 
+Leo enforces consistent code style and best practices using ESLint, TypeScript rules, and Prettier. All contributions must pass linting before being merged.
 
 
+## ✅ Linting Rules
+
+- ESLint: Enforces code quality, best practices, and React conventions
+- TypeScript ESLint: Prevents unsafe types, unused variables, and invalid patterns
+- React Hooks: Hooks rules are strictly enforced
+- Imports: Keep imports clean, ordered, and unused imports removed
+- No Console: Avoid console.log in production code
 
 
+## 🧪 Running Lint Locally
+
+Run linting before opening a pull request
+```bash
+pnpm lint
+```
+
+To automatically fix common issues:
+```bash
+pnpm lint --fix
+```
 
 
+## 🎯 Formatting Guidelines
+- Prettier handles formatting automatically
+- Do not manually format files
+- Let your editor or CI apply formatting rules
+- Formatting issues will fail CI checks
 
+## 🚫 CI Enforcement
+- Linting runs on every pull request
+- Pull requests cannot be merged if linting fails
+- Keep commits clean and focused to avoid lint noise
+
+## 💡 Best Practices
+- Fix lint warnings, not just errors
+- Prefer explicit types over any
+- Follow existing patterns—consistency matters
+- If you need to disable a rule, document why
+
+
+<br><br>
 
 
 
