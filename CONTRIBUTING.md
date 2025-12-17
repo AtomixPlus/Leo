@@ -21,8 +21,8 @@ This guide outlines how to contribute effectively, including branching strategy,
 
 # 📑 Table of Contents
 
-[![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
-[![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
+[![Pnpm](https://img.shields.io/badge/Pnpm-v1.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
+[![Node.js](https://img.shields.io/badge/Node.js-v2.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
 [![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
 [![Storybook](https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
@@ -72,10 +72,7 @@ The repository enforces pnpm via the packageManager field.
 <br><br>
 
 
-# 🧹 Code Quality
-[![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+# 🧹 Code Quality [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 
 - **TypeScript**: All components must be fully typed.
 - **Tailwind CSS**: Use utility classes consistently.
@@ -524,63 +521,6 @@ Leo uses Vitest and React Testing Library, along with Storybook stories, to prov
 
 
 
-
-# 🌿 Branching Strategy
-
-We follow a feature-driven branching workflow:
-
-- **main:** The stable production branch. Only fully tested and reviewed code is merged here.
-- **dev:** The main development branch. All feature branches should merge here first for testing and review.
-- **Feature branches:** Use descriptive names prefixed with the type of work:
-
-```bash
-feature/add-button-component
-fix/fix-button-disabled-state
-chore/update-dependencies
-```
-- Always branch from dev.
-- Keep branches small and focused on a single feature, fix, or chore.
-
-<br><br>
-
-
-# 📝 Pull Requests (PRs)
-
-### Creating a PR
-
-1️⃣ Fork the repository and clone your fork locally.
-2️⃣ Create a branch for your work:
-
-```bash
-git checkout -b feature/my-new-component
-```
-3️⃣ Make your changes:
-- Add or update components.
-- Write or update stories in Storybook.
-- Add or update tests in Vitest.
-
-
-4️⃣ Test your changes locally:
-
-```bash
-pnpm install
-pnpm test
-pnpm storybook
-```
-
-5️⃣ Commit changes with descriptive messages:
-```bash
-feat(Button): add new variant "ghost"
-fix(InputField): correct validation on empty input
-```
-Follow conventional commit style where possible: feat, fix, chore, docs, test, refactor.
-
-6️⃣ Push your branch:
-```bash
-git push origin feature/my-new-component
-```
-
-7️⃣ Open a PR against the dev branch on the main repository.
 
 <br><br>
 
