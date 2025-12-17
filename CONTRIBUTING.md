@@ -210,7 +210,7 @@ Both **pnpm** and **npm** are fully supported. Use **one package manager consist
 [![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
 [![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Playwright](https://img.shields.io/badge/Playwright-v1.47.2-2EAD33?style=flat&logo=https://raw.githubusercontent.com/AtomixPlus/Leo/main/.github/assets/playwright.svg)](https://playwright.dev/)
+[![Playwright](https://img.shields.io/badge/Playwright-v1.57.0-2EAD33?style=flat&logo=https://raw.githubusercontent.com/AtomixPlus/Leo/main/.github/assets/playwright.svg)](https://playwright.dev/)
 
 
 
