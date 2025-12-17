@@ -65,7 +65,7 @@ This guide outlines how to contribute effectively, including branching strategy,
 [![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Prettier](https://img.shields.io/badge/Prettier-v3.7.4-F7B93E?style=flat&logo=prettier&logoColor=white)](https://prettier.io/)
-[![ESLint](https://img.shields.io/badge/ESLint-vv9.39.2-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.39.2-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/)
 [![Playwright](https://img.shields.io/badge/Playwright-E2E%20tests-2EAD33?style=flat)](https://playwright.dev/)
 
 
@@ -1051,7 +1051,7 @@ Each component should have its own test file (<b>Component.test.tsx</b>) followi
  # ============================================================================
 -->
 
-# 🧹 Linting & Formatting [![Prettier](https://img.shields.io/badge/Prettier-v3.7.4-F7B93E?style=flat&logo=prettier&logoColor=white)](https://prettier.io/) [![ESLint](https://img.shields.io/badge/ESLint-vv9.39.2-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/) [![Linting](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml?branch=main)
+# 🧹 Linting & Formatting [![Prettier](https://img.shields.io/badge/Prettier-v3.7.4-F7B93E?style=flat&logo=prettier&logoColor=white)](https://prettier.io/) [![ESLint](https://img.shields.io/badge/ESLint-v9.39.2-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/) [![Linting](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/linting.yml?branch=main)
 
 
 Leo enforces consistent code style and best practices using ESLint, TypeScript rules, and Prettier. All contributions must pass linting before being merged.
