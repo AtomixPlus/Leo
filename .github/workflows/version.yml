@@ -117,6 +117,15 @@ jobs:
           sed -i -E "s#(!\[TypeScript\]\(https://img.shields.io/badge/Typescript-)[^ ]+(-informational\?style=flat&logo=typescript&color=3178c6\))#\1${TS_VERSION}\2#g" CONTRIBUTING.md
           grep "Typescript" || true
 
+      # Update Playwright Badge with Custom SVG
+      - name: Update Playwright Badge with Version
+        run: |
+          PLAYWRIGHT_VERSION=$(node -p "let v=require('./package.json').devDependencies.playwright.replace(/^\^/, ''); 'v'+v")
+          echo "Updating README.md with Playwright version: $PLAYWRIGHT_VERSION"
+          sed -i -E "s#(!\[Playwright\]\(https://img.shields.io/badge/Playwright-)[^ ]+(-2EAD33\?style=flat&logo=https://raw.githubusercontent.com/AtomixPlus/Leo/main/.github/assets/playwright.svg\))#\1${PLAYWRIGHT_VERSION}\2#g" README.md
+          sed -i -E "s#(!\[Playwright\]\(https://img.shields.io/badge/Playwright-)[^ ]+(-2EAD33\?style=flat&logo=https://raw.githubusercontent.com/AtomixPlus/Leo/main/.github/assets/playwright.svg\))#\1${PLAYWRIGHT_VERSION}\2#g" CONTRIBUTING.md
+          echo "Updated README.md and CONTRIBUTING.md: Playwright $PLAYWRIGHT_VERSION"
+
       # Update Prettier Badge
       - name: Update Prettier Badge with Version
         run: |
