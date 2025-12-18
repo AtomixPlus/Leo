@@ -9,13 +9,20 @@
 [![Deploying](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml?branch=main)
  
 
+Leo is a high-performance, developer-friendly React component library built with **TypeScript**, **Vite**, **Node.js**, and **Tailwind CSS**, designed for modern frontend workflows.
 
-A high-performance, developer-friendly React component library built with `TypeScript`, `Vite`, `Node.js`, and `Tailwind CSS`, designed for modern frontend workflows. 
+Every component is fully typed, tree-shakeable, and optimized for fast builds with **pnpm**, **Bun**, and other contemporary bundlers. Leo includes a robust testing setup using **Vitest** and **React Testing Library**, ensuring components are reliable, predictable, and production-ready.
 
-Every component is fully typed, tree-shakeable, and optimized for fast builds with `pnpm`, `Bun`, and other contemporary bundlers.
+Styling is handled with **Tailwind CSS**, enabling rapid development while keeping components flexible and easy to customize. Interactive documentation and visual testing are supported through **Storybook**, providing a reference for available components and their APIs.
 
-# 📑 Table of Contents
+Leo is perfect for developers and teams who want a scalable, fast, and flexible UI foundation for modern React projects, with developer experience and productivity in mind.
 
+
+<br/>
+
+
+
+# 💻 Installation
 [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/)
 [![npm](https://img.shields.io/badge/npm-v10.8.2-informational?style=flat&logo=npm&color=CC3534)](https://pnpm.io/)
 [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/)
@@ -28,37 +35,7 @@ Every component is fully typed, tree-shakeable, and optimized for fast builds wi
 [![Prettier](https://img.shields.io/badge/Prettier-v3.7.4-F7B93E?style=flat&logo=prettier&logoColor=white)](https://prettier.io/)
 [![ESLint](https://img.shields.io/badge/ESLint-v9.39.2-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/)
 
-- [Installation](#💻-Installation)
-- [Usage](#usage)
-- [Contributing](#🤝-Contributing)
-  - [Testing](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-testing)
-    - [Running Tests](#1️⃣-running-tests)
-    - [Adding New Tests](#2️⃣-adding-new-tests)
-    - [Guidelines for Writing Tests](#3️⃣-guidelines-for-writing-tests)
-  - [Storybook](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file#-storybook)
-    - [Running Storybook](#1️⃣-running-storybook)
-    - [Building Storybook](#2️⃣-building-storybook)
-    - [Writing Stories](#3️⃣-writing-stories)
-    - [Tips](#4️⃣-tips)
-- [License](#📜-License)
-
-
-# Overview
-
-Leo includes a comprehensive testing setup powered by Vitest and React Testing Library, helping ensure components are reliable, predictable, and production-ready.
-
-Styling is handled with Tailwind CSS, enabling rapid development while keeping components flexible and easy to customize. Interactive documentation and visual testing are supported through Storybook, which serves as a reference for available components and their APIs.
-
-Leo is well-suited for teams and individuals looking for a fast, consistent, and maintainable UI layer in modern React applications.
-
-
-The library comes with a robust testing setup using `Vitest` and `React Testing Library`, ensuring components are reliable, maintainable, and production-ready. `Tailwind CSS` integration allows for rapid, consistent styling while keeping components flexible and customizable. 
-
-Perfect for developers who want a scalable, fast, and flexible UI foundation for modern React projects, with developer experience and productivity in mind.
-
-
-# 💻 Installation
-You can install this library in your projects using 'pnpm', 'npm', or 'yarn'. Make sure your package registry is correctly configured if using a private registry, or install directly from a public registry or local path.
+You can install this library in your projects using `pnpm`, `npm`, or `yarn`. Make sure your package registry is correctly configured if using a private registry, or install directly from a public registry or local path.
 
 ```bash
 pnpm i @vortz/leo
