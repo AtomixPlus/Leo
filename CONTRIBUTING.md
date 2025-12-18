@@ -66,34 +66,31 @@ This guide outlines how to contribute effectively, including branching strategy,
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Prettier](https://img.shields.io/badge/Prettier-v3.7.4-F7B93E?style=flat&logo=prettier&logoColor=white)](https://prettier.io/)
 [![ESLint](https://img.shields.io/badge/ESLint-v9.39.2-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/)
-[![Playwright](https://img.shields.io/badge/Playwright-E2E%20tests-2EAD33?style=flat)](https://playwright.dev/)
 
 
+- 1️⃣ [Prerequisites](#⚙️-prerequisites)  
+- 2️⃣ [Installation](#⚡-installation)  
+- 3️⃣ [Creating Issues](#🐞-creating-issues)  
+- 4️⃣ [Branching](#🌿-branching)  
+- 5️⃣ [Pull Requests](#📝-pull-requests)  
+- 6️⃣ [Commit Messages](#📝-commit-messages)  
+  - 6️⃣.1️⃣ [Chores and Minor Fixes](#chores-and-minor-fixes)  
+- 7️⃣ [Workflow Summary](#📌-workflow-summary)  
+- 8️⃣ [Styling Guide](#🎨-styling-guide)  
+- 9️⃣ [Code Quality](#🧹-code-quality)  
+- 🔟 [Storybook](#📚-storybook)  
+  - 🔟.1️⃣ [Running Storybook](#⚡-running-storybook)  
+  - 🔟.2️⃣ [Building Storybook](#📦-building-storybook)  
+  - 🔟.3️⃣ [Writing Stories](#✏️-writing-stories)  
+  - 🔟.4️⃣ [Using Stories for Testing](#7️⃣-using-stories-for-testing)  
+- 1️⃣1️⃣ [Testing](#🧪-testing)  
+  - 1️⃣1️⃣.1️⃣ [Running Tests](#⚡-running-tests)  
+  - 1️⃣1️⃣.2️⃣ [Writing Tests](#✏️-writing-tests)  
+- 1️⃣2️⃣ [Linting & Formatting](#🧹-linting--formatting)  
+- 1️⃣3️⃣ [Security and Reporting Issues](#🛡-security-and-reporting-issues)  
+- 1️⃣4️⃣ [Final Notes](#✅-final-notes)  
+- 1️⃣5️⃣ [Thank You](#🙌-thank-you)  
 
-
-- 1️⃣ [Installation & Prerequisites](#💻-installation--prerequisites)
-- 2️⃣ [Usage](#usage)
-- 3️⃣ [Contributing](#🤝-contributing)
-  - 3️⃣.1️⃣ [Branching](#🌿-branching)
-  - 3️⃣.2️⃣ [Pull Requests](#📝-pull-requests)
-  - 3️⃣.3️⃣ [Chores and Minor Fixes](#🧹-chores-and-minor-fixes)
-- 4️⃣ [Code Quality](#🧹-code-quality)
-  - 4️⃣.1️⃣ [Styling Guidelines](#🎨-styling-guide)
-  - 4️⃣.2️⃣ [Linting & Formatting](#🧹-linting--formatting)
-- 5️⃣ [Storybook](#📚-storybook)
-  - 5️⃣.1️⃣ [Running Storybook](#⚡-running-storybook)
-  - 5️⃣.2️⃣ [Building Storybook](#📦-building-storybook)
-  - 5️⃣.3️⃣ [Writing Stories](#✏️-writing-stories)
-  - 5️⃣.4️⃣ [Using Stories for Tests](#7️⃣-using-stories-for-testing)
-  - 5️⃣.5️⃣ [Best Practices](#💡-best-practices)
-- 6️⃣ [Testing](#🧪-testing)
-  - 6️⃣.1️⃣ [Running Tests](#1️⃣-running-tests)
-  - 6️⃣.2️⃣ [Adding New Tests](#2️⃣-adding-new-tests)
-  - 6️⃣.3️⃣ [Guidelines for Writing Tests](#3️⃣-guidelines-for-writing-tests)
-- 7️⃣ [Workflow Summary](#📌-workflow-summary)
-- 8️⃣ [Security and Reporting Issues](#🛡-security-and-reporting-issues)
-- 9️⃣ [Final Notes](#✅-final-notes)
-- 🔟 [Thank You](#🙌-thank-you)
 
 
 <br><br>
@@ -230,26 +227,72 @@ npm install
 yarn install
 ```
 
+<br><br>
 
+
+
+
+# 🐞 Creating Issues [![Open Issues](https://img.shields.io/github/issues/AtomixPlus/Leo.svg?style=flat&color=red)](https://github.com/AtomixPlus/Leo/issues) [![Closed Issues](https://img.shields.io/github/issues-closed/AtomixPlus/Leo.svg?style=flat&color=green)](https://github.com/AtomixPlus/Leo/issues?q=is%3Aissue+is%3Aclosed)
+
+We love contributions! If you encounter a bug, have a feature request, or want to propose an improvement, please create an issue in this repository.
+
+### Steps to Create an Issue
+
+<details>
+  <summary><b>1️⃣ Check existing issues</b></summary>
+    Before opening a new issue, search the open issues to see if it has already been reported.
+  <br>
+</details>
+
+<details>
+  <summary><b>2️⃣ Open a new issue</b></summary>
+    Click the “New issue” button in the Issues tab.
+  <br>
+</details>
+
+<details>
+  <summary><b>3️⃣ Choose a template (if available)</b></summary>
+  
+  - Bug Report: Describe the problem, steps to reproduce, and expected vs. actual behavior.
+  - Feature Request: Explain the feature, why it’s useful, and any ideas for implementation.
+  <br>
+</details>
+
+<details>
+  <summary><b>4️⃣ Provide details</b></summary>
+  
+  Include:
+  - Environment (OS, browser, versions, etc.) if relevant
+  - Code snippets or screenshots
+  - Steps to reproduce (for bugs)
+
+  <br>
+</details>
+
+
+<details>
+  <summary><b>5️⃣ Submit the issue</b></summary>
+  
+  After filling in the details, click Submit new issue.
+
+  <br>
+</details>
+
+<br>
+
+
+### 💡 Best Practices
+
+- Be clear and concise.
+- Be respectful and constructive.
+- Include links to relevant discussions or resources if applicable.
+
+💡 Tip: Well-documented issues help us resolve them faster!
 
 <br><br>
 
 
 
-# 📌 Workflow Summary
-
-- ✅ Fork the repository
-- ✅ Create a branch from dev
-- ✅ Implement changes
-- ✅ Write/Update stories and tests
-- ✅ Run tests and storybook
-- ✅ Commit with clear message
-- ✅ Push branch and open PR against dev
-- ✅ Address review comments
-- ✅ PR merged after approval
-
-
-<br><br>
 
 <!--
 # ============================================================================
@@ -294,7 +337,7 @@ yarn install
 #
 # ============================================================================
 -->
-# 🌿 Branching [![Deploying](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml?branch=main)
+# 🌿 Creating Branches [![Deploying](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml?branch=main)
 
 We follow a feature-driven branching workflow:
 
@@ -314,6 +357,183 @@ git checkout -b chore/update-dependencies
 <br><br>
 
 
+
+# 📝 Pull Requests [![Pull Requests](https://img.shields.io/github/issues-pr/AtomixPlus/Leo?branch=main)](https://github.com/AtomixPlus/Leo/pulls) ![Closed PRs](https://img.shields.io/github/issues-pr-closed/AtomixPlus/Leo?branch=main)
+
+
+### Creating a PR
+
+<details>
+  <summary><b>1️⃣ Fork the repository and clone your fork locally.</b></summary>
+
+  ```bash
+  git checkout -b feature/my-new-component
+  ```
+  <br>
+</details>
+
+
+
+<details>
+  <summary><b>2️⃣ Create a branch for your work:</b></summary>
+
+  ```bash
+  git checkout -b feature/my-new-component
+  ```
+  <br>
+</details>
+
+
+<details>
+  <summary><b>3️⃣ Make your changes:</b></summary>
+
+  - Add or update components.
+  - Write or update stories in Storybook.
+  - Add or update tests in Vitest.
+
+  <br>
+</details>
+
+<details>
+  <summary><b>4️⃣ Test your changes locally:</b></summary>
+
+  ```bash
+  pnpm install
+  pnpm test
+  pnpm storybook
+  ```
+
+  <br>
+</details>
+
+
+<details>
+  <summary><b>5️⃣ Commit changes with descriptive messages:</b></summary>
+  
+  ```bash
+  feat(Button): add new variant "ghost"
+  fix(InputField): correct validation on empty input
+  ```
+  Follow conventional commit style where possible: feat, fix, chore, docs, test, refactor.
+
+  <br>
+</details>
+
+
+<details>
+  <summary><b>6️⃣ Push your branch:</b></summary>
+  
+  ```bash
+  git push origin feature/my-new-component
+  ```
+
+  <br>
+</details>
+
+
+<details>
+  <summary><b>7️⃣ Open a PR against the dev branch on the main repository.</b></summary>
+  
+  ```bash
+  git push origin feature/my-new-component
+  ```
+
+  <br>
+</details>
+
+
+<br><br>
+
+
+
+
+# 📝 Commit Messages
+
+Consistent commit messages help maintain a clean project history and make it easier for everyone to understand changes.
+
+<details>
+  <summary><b>Please follow these guidelines:</b></summary>
+  
+  Use the following conventional format for commit messages:
+
+  ```bash
+  <type>(<scope>): <subject>
+  ```
+  - **type**: The category of the change. Examples:
+    - **feat** — a new feature
+    - **fix** — a bug fix
+    - **docs** — documentation only changes
+    - **style** — formatting, missing semi-colons, etc; no code change
+    - **refactor** — code change that neither fixes a bug nor adds a feature
+    - **test** — adding or correcting tests
+    - **chore** — maintenance tasks, build scripts, etc
+
+  - **scope** (optional): The section of the code affected (e.g., Button, Login).
+  - **subject**: A short, imperative description of the change (max ~50 characters).
+
+  **Examples**
+
+  ```bash
+  feat(Button): add loading state
+  fix(Login): correct password validation
+  docs(Readme): update installation instructions
+  style(Header): adjust spacing and indentation
+  refactor(Auth): simplify login logic
+  test(User): add unit tests for registration
+  chore(Build): update dependencies
+  ```
+
+  <br>
+</details>
+
+<br>
+
+
+
+### Chores and Minor Fixes
+
+- For small changes (e.g., fixing typos, updating README, or bumping versions):
+- Use the chore/ prefix in branch names.
+
+<details>
+  <summary><b>Commit with messages like:</b></summary>
+  
+  ```bash
+  chore(readme): fix typo in installation instructions
+  chore(deps): update tailwindcss to v4.1.17
+  ```
+
+  <br>
+</details>
+
+<br>
+
+### 💡 Best Practices
+- ✅ Use imperative mood: “Add feature” instead of “Added feature.”
+- ✅ Keep the subject concise and descriptive.
+- ✅ Include additional details in the body if necessary (separate with a blank line).
+- ✅ Reference issues if relevant: fixes #123.
+
+<br><br>
+
+
+
+
+
+# 📌 Workflow Summary
+
+- ✅ Fork the repository
+- ✅ Create a branch from dev
+- ✅ Implement changes
+- ✅ Write/Update stories and tests
+- ✅ Run tests and storybook
+- ✅ Commit with clear message
+- ✅ Push branch and open PR against dev
+- ✅ Address review comments
+- ✅ PR merged after approval
+
+
+<br><br>
 
 
 
@@ -1108,232 +1328,7 @@ pnpm lint --fix
 - Follow existing patterns—consistency matters
 - If you need to disable a rule, document why
 
-
 <br><br>
-
-
-
-# 🐞 Creating Issues [![Open Issues](https://img.shields.io/github/issues/AtomixPlus/Leo.svg?style=flat&color=red)](https://github.com/AtomixPlus/Leo/issues) [![Closed Issues](https://img.shields.io/github/issues-closed/AtomixPlus/Leo.svg?style=flat&color=green)](https://github.com/AtomixPlus/Leo/issues?q=is%3Aissue+is%3Aclosed)
-
-We love contributions! If you encounter a bug, have a feature request, or want to propose an improvement, please create an issue in this repository.
-
-### Steps to Create an Issue
-
-<details>
-  <summary><b>1️⃣ Check existing issues</b></summary>
-    Before opening a new issue, search the open issues to see if it has already been reported.
-  <br>
-</details>
-
-<details>
-  <summary><b>2️⃣ Open a new issue</b></summary>
-    Click the “New issue” button in the Issues tab.
-  <br>
-</details>
-
-<details>
-  <summary><b>3️⃣ Choose a template (if available)</b></summary>
-  
-  - Bug Report: Describe the problem, steps to reproduce, and expected vs. actual behavior.
-  - Feature Request: Explain the feature, why it’s useful, and any ideas for implementation.
-  <br>
-</details>
-
-<details>
-  <summary><b>4️⃣ Provide details</b></summary>
-  
-  Include:
-  - Environment (OS, browser, versions, etc.) if relevant
-  - Code snippets or screenshots
-  - Steps to reproduce (for bugs)
-
-  <br>
-</details>
-
-
-<details>
-  <summary><b>5️⃣ Submit the issue</b></summary>
-  
-  After filling in the details, click Submit new issue.
-
-  <br>
-</details>
-
-<br>
-
-
-### 💡 Best Practices
-
-- Be clear and concise.
-- Be respectful and constructive.
-- Include links to relevant discussions or resources if applicable.
-
-💡 Tip: Well-documented issues help us resolve them faster!
-
-<br><br>
-
-
-
-
-
-# 📝 Pull Requests [![Pull Requests](https://img.shields.io/github/issues-pr/AtomixPlus/Leo?branch=main)](https://github.com/AtomixPlus/Leo/pulls) ![Closed PRs](https://img.shields.io/github/issues-pr-closed/AtomixPlus/Leo?branch=main)
-
-
-### Creating a PR
-
-<details>
-  <summary><b>1️⃣ Fork the repository and clone your fork locally.</b></summary>
-
-  ```bash
-  git checkout -b feature/my-new-component
-  ```
-  <br>
-</details>
-
-
-
-<details>
-  <summary><b>2️⃣ Create a branch for your work:</b></summary>
-
-  ```bash
-  git checkout -b feature/my-new-component
-  ```
-  <br>
-</details>
-
-
-<details>
-  <summary><b>3️⃣ Make your changes:</b></summary>
-
-  - Add or update components.
-  - Write or update stories in Storybook.
-  - Add or update tests in Vitest.
-
-  <br>
-</details>
-
-<details>
-  <summary><b>4️⃣ Test your changes locally:</b></summary>
-
-  ```bash
-  pnpm install
-  pnpm test
-  pnpm storybook
-  ```
-
-  <br>
-</details>
-
-
-<details>
-  <summary><b>5️⃣ Commit changes with descriptive messages:</b></summary>
-  
-  ```bash
-  feat(Button): add new variant "ghost"
-  fix(InputField): correct validation on empty input
-  ```
-  Follow conventional commit style where possible: feat, fix, chore, docs, test, refactor.
-
-  <br>
-</details>
-
-
-<details>
-  <summary><b>6️⃣ Push your branch:</b></summary>
-  
-  ```bash
-  git push origin feature/my-new-component
-  ```
-
-  <br>
-</details>
-
-
-<details>
-  <summary><b>7️⃣ Open a PR against the dev branch on the main repository.</b></summary>
-  
-  ```bash
-  git push origin feature/my-new-component
-  ```
-
-  <br>
-</details>
-
-
-<br><br>
-
-
-
-
-# 📝 Commit Messages
-
-Consistent commit messages help maintain a clean project history and make it easier for everyone to understand changes.
-
-<details>
-  <summary><b>Please follow these guidelines:</b></summary>
-  
-  Use the following conventional format for commit messages:
-
-  ```bash
-  <type>(<scope>): <subject>
-  ```
-  - **type**: The category of the change. Examples:
-    - **feat** — a new feature
-    - **fix** — a bug fix
-    - **docs** — documentation only changes
-    - **style** — formatting, missing semi-colons, etc; no code change
-    - **refactor** — code change that neither fixes a bug nor adds a feature
-    - **test** — adding or correcting tests
-    - **chore** — maintenance tasks, build scripts, etc
-
-  - **scope** (optional): The section of the code affected (e.g., Button, Login).
-  - **subject**: A short, imperative description of the change (max ~50 characters).
-
-  **Examples**
-
-  ```bash
-  feat(Button): add loading state
-  fix(Login): correct password validation
-  docs(Readme): update installation instructions
-  style(Header): adjust spacing and indentation
-  refactor(Auth): simplify login logic
-  test(User): add unit tests for registration
-  chore(Build): update dependencies
-  ```
-
-  <br>
-</details>
-
-<br>
-
-
-
-### Chores and Minor Fixes
-
-- For small changes (e.g., fixing typos, updating README, or bumping versions):
-- Use the chore/ prefix in branch names.
-
-<details>
-  <summary><b>Commit with messages like:</b></summary>
-  
-  ```bash
-  chore(readme): fix typo in installation instructions
-  chore(deps): update tailwindcss to v4.1.17
-  ```
-
-  <br>
-</details>
-
-<br>
-
-### 💡 Best Practices
-- ✅ Use imperative mood: “Add feature” instead of “Added feature.”
-- ✅ Keep the subject concise and descriptive.
-- ✅ Include additional details in the body if necessary (separate with a blank line).
-- ✅ Reference issues if relevant: fixes #123.
-
-<br><br>
-
 
 
 # 🛡 Security and Reporting Issues
