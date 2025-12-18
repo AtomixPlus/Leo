@@ -56,7 +56,7 @@ If you find a bug or have a feature request:
 # 🤝 Contributing
 We welcome contributions to improve this component library! Whether you want to add new components, fix bugs, improve documentation, or enhance tests, your help is appreciated. 
 
-Read the [contributing guide](https://github.com/AtomixPlus/Leo?tab=contributing-ov-file) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
+Read the [contributing guide](https://github.com/AtomixPlus/Leo/contributing.md) to learn about our development process, how to propose bug fixes and improvements, and how to build and test your changes.
 
 Contributing to Leo is about more than just issues and pull requests! There are many other ways to support Leo beyond contributing to the code base.
 
