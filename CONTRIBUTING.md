@@ -68,7 +68,7 @@ This guide outlines how to contribute effectively, including branching strategy,
 [![ESLint](https://img.shields.io/badge/ESLint-v9.39.2-4B32C3?style=flat&logo=eslint&logoColor=white)](https://eslint.org/)
 
 
-- 1️⃣ [Prerequisites](#⚙️-prerequisites)  
+- 1️⃣ [Prerequisites](#prerequisites)  
 - 2️⃣ [Installation](#⚡-installation)  
 - 3️⃣ [Creating Issues](#🐞-creating-issues)  
 - 4️⃣ [Branching](#🌿-branching)  
@@ -137,7 +137,11 @@ This guide outlines how to contribute effectively, including branching strategy,
 #
 # ============================================================================
 -->
-# ⚙️ Prerequisites [![Node.js](https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a)](https://nodejs.org/) [![Pnpm](https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00)](https://pnpm.io/) [![npm](https://img.shields.io/badge/npm-v10.8.2-informational?style=flat&logo=npm&color=CC3534)](https://pnpm.io/)
+<h1 id="prerequisites">⚙️ Prerequisites 
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-v20.19.6-informational?style=flat&logo=nodedotjs&color=3c873a" alt="Node.js"></a>
+  <a href="https://pnpm.io/"><img src="https://img.shields.io/badge/Pnpm-v10.26.0-informational?style=flat&logo=pnpm&color=F9AD00" alt="pnpm"></a>
+  <a href="https://pnpm.io/"><img src="https://img.shields.io/badge/npm-v10.8.2-informational?style=flat&logo=npm&color=CC3534" alt="npm"></a>
+</h1>
 
 Before contributing, ensure you have the following tools installed and correctly configured.
 
