@@ -9,14 +9,11 @@
 [![Deploying](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml?branch=main)
  
 
-Leo is a high-performance, developer-friendly React component library built with **TypeScript**, **Vite**, **Node.js**, and **Tailwind CSS**, designed for modern frontend workflows.
+Leo is a high-performance React component library built with **TypeScript**, **Vite**, **Node.js**, and **Tailwind CSS**. Designed for modern workflows, every component is fully typed, tree-shakeable, and optimized for fast builds.
 
-Every component is fully typed, tree-shakeable, and optimized for fast builds with **pnpm**, **Bun**, and other contemporary bundlers. Leo includes a robust testing setup using **Vitest** and **React Testing Library**, ensuring components are reliable, predictable, and production-ready.
+With **Vitest** and **React Testing Library**, components are reliable and production-ready, while **Tailwind CSS** ensures rapid, flexible styling. **Storybook** provides interactive documentation and visual testing, making it easy to explore and integrate components.
 
-Styling is handled with **Tailwind CSS**, enabling rapid development while keeping components flexible and easy to customize. Interactive documentation and visual testing are supported through **Storybook**, providing a reference for available components and their APIs.
-
-Leo is perfect for developers and teams who want a scalable, fast, and flexible UI foundation for modern React projects, with developer experience and productivity in mind.
-
+Leo offers a fast, scalable, and flexible UI foundation for modern React projects—built to empower developers and inspire innovative solutions.
 
 <br/>
 
