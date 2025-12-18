@@ -69,27 +69,27 @@ This guide outlines how to contribute effectively, including branching strategy,
 
 
 - 1️⃣ [Prerequisites](#prerequisites)  
-- 2️⃣ [Installation](#⚡-installation)  
-- 3️⃣ [Creating Issues](#🐞-creating-issues)  
-- 4️⃣ [Branching](#🌿-branching)  
-- 5️⃣ [Pull Requests](#📝-pull-requests)  
-- 6️⃣ [Commit Messages](#📝-commit-messages)  
+- 2️⃣ [Installation](#installation)  
+- 3️⃣ [Creating Issues](#creating-issues)  
+- 4️⃣ [Branching](#branching)  
+- 5️⃣ [Pull Requests](#pull-requests)  
+- 6️⃣ [Commit Messages](#commit-messages)  
   - 6️⃣.1️⃣ [Chores and Minor Fixes](#chores-and-minor-fixes)  
-- 7️⃣ [Workflow Summary](#📌-workflow-summary)  
-- 8️⃣ [Styling Guide](#🎨-styling-guide)  
-- 9️⃣ [Code Quality](#🧹-code-quality)  
-- 🔟 [Storybook](#📚-storybook)  
-  - 🔟.1️⃣ [Running Storybook](#⚡-running-storybook)  
-  - 🔟.2️⃣ [Building Storybook](#📦-building-storybook)  
-  - 🔟.3️⃣ [Writing Stories](#✏️-writing-stories)  
-  - 🔟.4️⃣ [Using Stories for Testing](#7️⃣-using-stories-for-testing)  
-- 1️⃣1️⃣ [Testing](#🧪-testing)  
-  - 1️⃣1️⃣.1️⃣ [Running Tests](#⚡-running-tests)  
-  - 1️⃣1️⃣.2️⃣ [Writing Tests](#✏️-writing-tests)  
-- 1️⃣2️⃣ [Linting & Formatting](#🧹-linting--formatting)  
-- 1️⃣3️⃣ [Security and Reporting Issues](#🛡-security-and-reporting-issues)  
-- 1️⃣4️⃣ [Final Notes](#✅-final-notes)  
-- 1️⃣5️⃣ [Thank You](#🙌-thank-you)  
+- 7️⃣ [Workflow Summary](#workflow-summary)  
+- 8️⃣ [Styling Guide](#styling-guide)  
+- 9️⃣ [Code Quality](#code-quality)  
+- 🔟 [Storybook](#storybook)  
+  - 🔟.1️⃣ [Running Storybook](#running-storybook)  
+  - 🔟.2️⃣ [Building Storybook](#building-storybook)  
+  - 🔟.3️⃣ [Writing Stories](#writing-stories)  
+  - 🔟.4️⃣ [Using Stories for Testing](#using-stories-for-testing)  
+- 1️⃣1️⃣ [Testing](#testing)  
+  - 1️⃣1️⃣.1️⃣ [Running Tests](#running-tests)  
+  - 1️⃣1️⃣.2️⃣ [Writing Tests](#writing-tests)  
+- 1️⃣2️⃣ [Linting & Formatting](#linting--formatting)  
+- 1️⃣3️⃣ [Security and Reporting Issues](#security-and-reporting-issues)  
+- 1️⃣4️⃣ [Final Notes](#final-notes)  
+- 1️⃣5️⃣ [Thank You](#thank-you)  
 
 
 
@@ -204,14 +204,14 @@ Both **pnpm** and **npm** are fully supported. Use **one package manager consist
 #
 # ============================================================================
 -->
-# ⚡ Installation 
-[![Vite](https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF)](https://vitejs.dev/)
-[![Vitest](https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF)](https://vitest.dev/)
-[![Storybook](https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785)](https://storybook.js.org/)
-[![TypeScript](https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6)](https://www.typescriptlang.org/)
-[![React.js](https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
+<h1 id="installation">⚡ Installation
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-v7.2.6-informational?style=flat&logo=vite&color=646CFF" alt="Vite"></a>
+  <a href="https://vitest.dev/"><img src="https://img.shields.io/badge/Vitest-v4.0.15-informational?style=flat&logo=vite&color=646CFF" alt="Vitest"></a>
+  <a href="https://storybook.js.org/"><img src="https://img.shields.io/badge/Storybook-v10.1.4-FF4785?style=flat&logo=storybook&logoColor=FF4785" alt="Storybook"></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/Typescript-v5.9.3-informational?style=flat&logo=typescript&color=3178c6" alt="TypeScript"></a>
+  <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React.js-v18.3.1-61DAFB?logo=react&logoColor=white" alt="React.js"></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind%20CSS-v4.1.17-38B2AC?style=flat&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"></a>
+</h1>
 
 
 Leo uses pnpm as the primary package manager. Install all dependencies with:
@@ -236,7 +236,10 @@ yarn install
 
 
 
-# 🐞 Creating Issues [![Open Issues](https://img.shields.io/github/issues/AtomixPlus/Leo.svg?style=flat&color=red)](https://github.com/AtomixPlus/Leo/issues) [![Closed Issues](https://img.shields.io/github/issues-closed/AtomixPlus/Leo.svg?style=flat&color=green)](https://github.com/AtomixPlus/Leo/issues?q=is%3Aissue+is%3Aclosed)
+<h1 id="creating-issues">🐞 Creating Issues
+  <a href="https://github.com/AtomixPlus/Leo/issues"><img src="https://img.shields.io/github/issues/AtomixPlus/Leo.svg?style=flat&color=red" alt="Open Issues"></a>
+  <a href="https://github.com/AtomixPlus/Leo/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/AtomixPlus/Leo.svg?style=flat&color=green" alt="Closed Issues"></a>
+</h1>
 
 We love contributions! If you encounter a bug, have a feature request, or want to propose an improvement, please create an issue in this repository.
 
