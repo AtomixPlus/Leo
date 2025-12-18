@@ -9,7 +9,7 @@
 [![Deploying](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml/badge.svg)](https://github.com/AtomixPlus/Leo/actions/workflows/deploying.yml?branch=main)
  
 
-Leo is a high-performance React component library built with **TypeScript**, **Vite**, **Node.js**, and **Tailwind CSS**. Designed for modern workflows, every component is fully typed, tree-shakeable, and optimized for fast builds.
+Leo is a high-performance React [component library](https://atomixplus.github.io/Leo/) built with **TypeScript**, **Vite**, **Node.js**, and **Tailwind CSS**. Designed for modern workflows, every component is fully typed, tree-shakeable, and optimized for fast builds.
 
 With **Vitest** and **React Testing Library**, components are reliable and production-ready, while **Tailwind CSS** ensures rapid, flexible styling. **Storybook** provides interactive documentation and visual testing, making it easy to explore and integrate components.
 
